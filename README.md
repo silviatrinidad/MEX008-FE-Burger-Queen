@@ -10,7 +10,7 @@
 * [6. Pistas, tips y lecturas complementarias](#6-pistas-tips-y-lecturas-complementarias)
 * [7. Autoevaluación](#7-autoevaluación)
 
-***
+**+
 
 ## 1. Preámbulo
 
