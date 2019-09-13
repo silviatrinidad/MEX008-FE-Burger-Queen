@@ -1,0 +1,18 @@
+button{
+    margin: 18px;
+    padding: 5px;
+}
+
+
+
+div .mdl-button--raised{
+    height: 80px;
+    width: 80px;
+    padding: 0;
+}
+
+div .rectangule{
+    height: 80px;
+    width: 100px;
+}
+
