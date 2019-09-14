@@ -34,3 +34,4 @@ describe('AppComponent', () => {
     expect(compiled.querySelector('.content span').textContent).toContain('my-first-project app is running!');
   });
 });
+
