@@ -6,10 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./lateral-bar.component.css']
 })
 export class LateralBarComponent implements OnInit {
-
+    showFiller = false;
   constructor() { }
 
   ngOnInit() {
   }
 
 }
+
+
+
+
+

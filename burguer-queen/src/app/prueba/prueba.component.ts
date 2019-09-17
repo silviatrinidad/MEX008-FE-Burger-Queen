@@ -17,6 +17,8 @@ export interface Tile {
 })
 export class PruebaComponent {
   tiles: Tile[] = [
-
   ];
 }
+
+const btnColor = document.getElementById('change-color').style.background = "black";
+
