@@ -20,5 +20,4 @@ export class PruebaComponent {
   ];
 }
 
-const btnColor = document.getElementById('change-color').style.background = "black";
 
