@@ -23,7 +23,7 @@
   .example-sidenav-content{
     background: #F7F7F7;
     height: 750px;
-    width: 80%;
+    width: 100%;
     border-radius: 0 33px 33px 0;
   }
 
@@ -37,11 +37,11 @@
     transform: rotate(270deg);
   }
 
-  .mesas{
+  /* .mesas{ */
     /* writing-mode: vertical-lr;
     transform: rotate(-270deg); */
-    width: 80vw;
-  }
+
+  /* } */
 
   .mat-drawer-container .list-administrator ul li a{
     text-decoration: none;
@@ -61,7 +61,7 @@
 
 
   .example-container{
-    width: 100%;
+    width: 80%;
   }
 
 
