@@ -1,5 +1,6 @@
 .app-header{
     background: #FFE867;
+    margin: 2px;
     font-family: Barlow Semi Condensed, Bold Italic;
     border-radius: 33px;
     height: 50px;
@@ -13,10 +14,6 @@
 }
 
 .container-header{
-    width: 100vw;
-    
+    width: 95vw;
 }
 
-.header{
-    flex-direction: row-reverse;
-}
