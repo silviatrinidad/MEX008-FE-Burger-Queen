@@ -15,6 +15,7 @@ import {MatButtonModule} from '@angular/material/button';
 import {LateralBarComponent} from './lateral-bar/lateral-bar.component';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list';
+import { MenuComponent } from './menu/menu.component';
 
 
 
@@ -25,6 +26,7 @@ import {MatListModule} from '@angular/material/list';
     HeaderComponent,
     PruebaComponent,
     LateralBarComponent,
+    MenuComponent,
     
   ],
   imports: [
