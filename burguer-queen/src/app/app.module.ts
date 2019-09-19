@@ -15,7 +15,11 @@ import {MatButtonModule} from '@angular/material/button';
 import {LateralBarComponent} from './lateral-bar/lateral-bar.component';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list';
-import { MenuComponent } from './menu/menu.component';
+
+//Componentes que contienen la pagina de las mesas-barras y la comanda respectivamente
+import { InitContainerComponent } from './init-container/init-container.component';
+import { TakeOrderComponent } from './take-order/take-order.component';
+
 
 
 
@@ -26,6 +30,8 @@ import { MenuComponent } from './menu/menu.component';
     HeaderComponent,
     PruebaComponent,
     LateralBarComponent,
+    InitContainerComponent,
+    TakeOrderComponent,
     MenuComponent,
     
   ],
