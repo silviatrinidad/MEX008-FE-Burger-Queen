@@ -19,57 +19,15 @@
   </mat-drawer> 
 
   <!-- Efecto de deslizamiento sidenav -->
-  <div class="example-sidenav-content" fxLayout = ""  fxLayoutAlign = "">
-    <button class = "nav" type="button"  (click)="drawer.toggle()">
+  <div class="example-sidenav-content" fxLayout = "row"  fxLayoutAlign = " center start">
+    <div class="button-administrator" fxLayout = "row"  fxLayoutAlign = "start center">
+    <button class = "nav" type="button"  (click)="drawer.toggle()" fxLayout = "row"  fxLayoutAlign = "center start">
       ADMINISTRADOR
     </button>
+    </div>
+  <ng-content></ng-content>
 
-<ng-content></ng-content>
   </div>
-  <!-- <div class="mesas"> -->
-    <!-- Botones de barra superior de barra con Layout -->
-<!-- <div  fxLayout = "row"  fxLayoutAlign = "center center" class="btn-circule">
-    <button class="mdl-button mdl-button--fab" id="change-color">1</button>
-    <button class="mdl-button mdl-button--fab">2</button>
-    <button class="mdl-button mdl-button--fab">3</button>
-    <button class="mdl-button mdl-button--fab">4</button>
-</div>
-<br>
-<br> -->
-<!-- Botones de mesas -->
-<!-- <div  fxLayout = "row"  fxLayoutAlign = "center center" class="btn-square">
-    <button class="mdl-button mdl-button--raised">Mesa 1</button>
-    <button class="mdl-button mdl-button--raised">Mesa 2</button>
-</div>
-<br>
-<br> -->
-<!-- Boton de mesa del centro -->
-<!-- <div  fxLayout = "row"  fxLayoutAlign = "center center" class="btn-square-bg">
-    <button class="mdl-button mdl-button--raised rectangule">Mesa 3</button>
-</div>
-<br>
-<br> -->
-<!-- Botones de barra inferior -->
-<!-- <div  fxLayout = "row"  fxLayoutAlign = "center center">
-    <button class="mdl-button mdl-button--fab">5</button>
-    <button class="mdl-button mdl-button--fab">6</button>
-    <button class="mdl-button mdl-button--fab">7</button>
-    <button class="mdl-button mdl-button--fab">8</button>
-    <button class="mdl-button mdl-button--fab">9</button>
-    <button class="mdl-button mdl-button--fab">10</button>
-    <button class="mdl-button mdl-button--fab">11</button>
-    <button class="mdl-button mdl-button--fab">12</button>
-</div>
-<br>
-<br> -->
-<!-- Botones de mesas de pantalla inferior -->
-<!-- <div  fxLayout = "row"  fxLayoutAlign = "center center">
-    <button class="mdl-button mdl-button--raised">Mesa 4</button>
-    <button class="mdl-button mdl-button--raised">Mesa 5</button>
-</div>
-</div> -->
-
-
 
 </mat-drawer-container>
 
