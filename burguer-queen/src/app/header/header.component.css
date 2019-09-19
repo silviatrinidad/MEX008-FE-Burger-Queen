@@ -7,3 +7,16 @@
     width: 200px;
     font-weight: bold;
 }
+
+.header{
+    width: 100%;
+}
+
+.container-header{
+    width: 100vw;
+    
+}
+
+.header{
+    flex-direction: row-reverse;
+}

@@ -4,9 +4,12 @@ import 'hammerjs';
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {HeaderComponent} from './header/header.component';
+// Módulo de animación
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {PruebaComponent} from './prueba/prueba.component';
+// Módulo de grid
 import {MatGridListModule} from '@angular/material/grid-list';
+// Modulo de FlexLayout
 import {FlexLayoutModule} from '@angular/flex-layout';
 import {MatButtonModule} from '@angular/material/button';
 import {LateralBarComponent} from './lateral-bar/lateral-bar.component';
@@ -32,7 +35,8 @@ import {MatListModule} from '@angular/material/list';
     MatButtonModule,
     MatSidenavModule,
     BrowserAnimationsModule,
-    MatListModule
+    MatListModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
