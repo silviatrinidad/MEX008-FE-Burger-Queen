@@ -24,6 +24,7 @@ import {MatIconModule} from "@angular/material/icon";
 
 
 
+
 @NgModule({
   exports: [MatGridListModule],
   declarations: [
@@ -34,7 +35,7 @@ import {MatIconModule} from "@angular/material/icon";
     InitContainerComponent,
     TakeOrderComponent,
     BarTotalComponent,
-
+    MenuComponent,
   ],
   imports: [
     BrowserModule,
