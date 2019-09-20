@@ -20,7 +20,7 @@ import { InitContainerComponent } from './init-container/init-container.componen
 import { TakeOrderComponent } from './take-order/take-order.component';
 import { MenuComponent } from './menu/menu.component';
 import { Component, OnInit } from '@angular/core';
-import { Prueba2Component } from './prueba2/prueba2.component';
+// import { Prueba2Component } from './prueba2/prueba2.component';
 
 
 
