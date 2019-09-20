@@ -15,17 +15,18 @@ import {MatButtonModule} from '@angular/material/button';
 import {LateralBarComponent} from './lateral-bar/lateral-bar.component';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list';
-//Componentes que contienen la pagina de las mesas-barras y la comanda respectivamente
+// Componentes que contienen la pagina de las mesas-barras y la comanda respectivamente
 import { InitContainerComponent } from './init-container/init-container.component';
 import { TakeOrderComponent } from './take-order/take-order.component';
-import { MenuComponent } from './menu/menu.component';
-import { Component, OnInit } from '@angular/core';
-import { Prueba2Component } from './prueba2/prueba2.component';
+import { BarTotalComponent } from './bar-total/bar-total.component';
+import {MatIconModule} from "@angular/material/icon";
+
+
 
 
 
 @NgModule({
-  exports:[MatGridListModule],
+  exports: [MatGridListModule],
   declarations: [
     AppComponent,
     HeaderComponent,
@@ -33,8 +34,8 @@ import { Prueba2Component } from './prueba2/prueba2.component';
     LateralBarComponent,
     InitContainerComponent,
     TakeOrderComponent,
+    BarTotalComponent,
     MenuComponent,
-    
   ],
   imports: [
     BrowserModule,
@@ -45,7 +46,8 @@ import { Prueba2Component } from './prueba2/prueba2.component';
     MatSidenavModule,
     BrowserAnimationsModule,
     MatListModule,
-    
+    MatIconModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
