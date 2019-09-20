@@ -3,17 +3,18 @@
     margin: 2px;
     font-family: Barlow Semi Condensed, Bold Italic;
     border-radius: 33px;
-    height: 50px;
+    height: 6vh;
     text-align: center;
-    width: 200px;
+    width: 10vw;
     font-weight: bold;
 }
 
 .header{
-    width: 100%;
+    width: 95%;
+    margin: 5px;
+    padding: 10px;
 }
 
-.container-header{
-    width: 95vw;
-}
+
+
 
