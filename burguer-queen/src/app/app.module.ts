@@ -15,7 +15,7 @@ import {MatButtonModule} from '@angular/material/button';
 import {LateralBarComponent} from './lateral-bar/lateral-bar.component';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list';
-//Componentes que contienen la pagina de las mesas-barras y la comanda respectivamente
+// Componentes que contienen la pagina de las mesas-barras y la comanda respectivamente
 import { InitContainerComponent } from './init-container/init-container.component';
 import { TakeOrderComponent } from './take-order/take-order.component';
 import { MenuComponent} from './menu/menu.component';
@@ -24,9 +24,15 @@ import {MatMenuModule} from '@angular/material/menu';
 import { FormsModule } from '@angular/forms';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
+import { BarTotalComponent } from './bar-total/bar-total.component';
+
+
+
+
+
 
 @NgModule({
-  exports:[MatGridListModule],
+  exports: [MatGridListModule],
   declarations: [
     AppComponent,
     HeaderComponent,
@@ -34,6 +40,7 @@ import { MatIconModule } from '@angular/material/icon';
     LateralBarComponent,
     InitContainerComponent,
     TakeOrderComponent,
+    BarTotalComponent,
     MenuComponent,
   
     
@@ -51,6 +58,7 @@ import { MatIconModule } from '@angular/material/icon';
     FormsModule,
     MatToolbarModule,
     MatIconModule
+
   ],
   
   providers: [],
