@@ -15,15 +15,17 @@ import {MatButtonModule} from '@angular/material/button';
 import {LateralBarComponent} from './lateral-bar/lateral-bar.component';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list';
-//Componentes que contienen la pagina de las mesas-barras y la comanda respectivamente
+// Componentes que contienen la pagina de las mesas-barras y la comanda respectivamente
 import { InitContainerComponent } from './init-container/init-container.component';
 import { TakeOrderComponent } from './take-order/take-order.component';
+import { BarTotalComponent } from './bar-total/bar-total.component';
+import {MatIconModule} from "@angular/material/icon";
 
 
 
 
 @NgModule({
-  exports:[MatGridListModule],
+  exports: [MatGridListModule],
   declarations: [
     AppComponent,
     HeaderComponent,
@@ -31,7 +33,8 @@ import { TakeOrderComponent } from './take-order/take-order.component';
     LateralBarComponent,
     InitContainerComponent,
     TakeOrderComponent,
-    
+    BarTotalComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -42,7 +45,8 @@ import { TakeOrderComponent } from './take-order/take-order.component';
     MatSidenavModule,
     BrowserAnimationsModule,
     MatListModule,
-    
+    MatIconModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
