@@ -18,14 +18,9 @@ import {MatListModule} from '@angular/material/list';
 //Componentes que contienen la pagina de las mesas-barras y la comanda respectivamente
 import { InitContainerComponent } from './init-container/init-container.component';
 import { TakeOrderComponent } from './take-order/take-order.component';
-<<<<<<< HEAD
-import { StateOrdenComponent } from './state-orden/state-orden.component';
-
-=======
 import { MenuComponent } from './menu/menu.component';
 import { Component, OnInit } from '@angular/core';
-import { Prueba2Component } from './prueba2/prueba2.component';
->>>>>>> 5739e83f217cc5e78142c90f26e5a5eb6cac7c75
+// import { Prueba2Component } from './prueba2/prueba2.component'
 
 
 
@@ -38,11 +33,7 @@ import { Prueba2Component } from './prueba2/prueba2.component';
     LateralBarComponent,
     InitContainerComponent,
     TakeOrderComponent,
-<<<<<<< HEAD
-    StateOrdenComponent,
-=======
     MenuComponent,
->>>>>>> 5739e83f217cc5e78142c90f26e5a5eb6cac7c75
     
   ],
   imports: [
