@@ -1,0 +1,49 @@
+*{
+    font-family: Barlow Semi Condensed, Bold Italic;
+}
+
+.container {
+    width: 50vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    border: 1px solid white;
+}
+
+.drawer-content{
+    width: 30%;
+}
+
+.main-content{
+    background: blue;
+}
+
+/* .container .drawer-content{
+background: yellow;
+} */
+
+.container .drawer-content .menu ul li{
+    text-decoration: none;
+    list-style: none;
+    background: white;
+    color: black;
+
+}
+
+.container .drawer-content .menu ul {
+    margin: 0;
+    padding: 0;
+}
+
+.container .drawer-content .menu ul li a{
+    color: black;
+    font-size: 20px;
+    list-style: none;
+}
+
+.container .drawer-content .menu ul li a:hover{
+    background: #FFE867;
+    widows: 100%;
+    border-radius: 10px;
+}
+
