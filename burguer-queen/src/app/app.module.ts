@@ -18,11 +18,12 @@ import {MatListModule} from '@angular/material/list';
 //Componentes que contienen la pagina de las mesas-barras y la comanda respectivamente
 import { InitContainerComponent } from './init-container/init-container.component';
 import { TakeOrderComponent } from './take-order/take-order.component';
-import { MenuComponent } from './menu/menu.component';
-import { Component, OnInit } from '@angular/core';
-import { Prueba2Component } from './prueba2/prueba2.component';
-
-
+import { MenuComponent} from './menu/menu.component';
+import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
+import {MatMenuModule} from '@angular/material/menu';
+import { FormsModule } from '@angular/forms';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   exports:[MatGridListModule],
@@ -34,6 +35,7 @@ import { Prueba2Component } from './prueba2/prueba2.component';
     InitContainerComponent,
     TakeOrderComponent,
     MenuComponent,
+  
     
   ],
   imports: [
@@ -45,9 +47,16 @@ import { Prueba2Component } from './prueba2/prueba2.component';
     MatSidenavModule,
     BrowserAnimationsModule,
     MatListModule,
-    
+    MatMenuModule,
+    FormsModule,
+    MatToolbarModule,
+    MatIconModule
   ],
+  
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+platformBrowserDynamic().bootstrapModule(AppModule);
+
