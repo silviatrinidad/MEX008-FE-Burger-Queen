@@ -18,6 +18,8 @@ import {MatListModule} from '@angular/material/list';
 //Componentes que contienen la pagina de las mesas-barras y la comanda respectivamente
 import { InitContainerComponent } from './init-container/init-container.component';
 import { TakeOrderComponent } from './take-order/take-order.component';
+import { BillComponent } from './bill/bill.component';
+import { BillClientComponent } from './bill-client/bill-client.component';
 
 
 
@@ -31,6 +33,8 @@ import { TakeOrderComponent } from './take-order/take-order.component';
     LateralBarComponent,
     InitContainerComponent,
     TakeOrderComponent,
+    BillComponent,
+    BillClientComponent,
     
   ],
   imports: [
