@@ -1,7 +1,4 @@
-
-import { Component, OnInit } from '@angular/core';
-
-import {Component, ViewChild} from '@angular/core';
+import {Component, ViewChild, OnInit } from '@angular/core';
 import {MatSidenav} from '@angular/material/sidenav';
 
 /** @title Sidenav with custom escape and backdrop click behavior */

@@ -25,7 +25,7 @@ import { FormsModule } from '@angular/forms';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { BarTotalComponent } from './bar-total/bar-total.component';
-
+import {MatCardModule} from '@angular/material/card';
 
 
 
@@ -57,7 +57,8 @@ import { BarTotalComponent } from './bar-total/bar-total.component';
     MatMenuModule,
     FormsModule,
     MatToolbarModule,
-    MatIconModule
+    MatIconModule,
+    MatCardModule
 
   ],
   
