@@ -7,8 +7,6 @@ import {HeaderComponent} from './header/header.component';
 // Módulo de animación
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {PruebaComponent} from './prueba/prueba.component';
-// Módulo de grid
-import {MatGridListModule} from '@angular/material/grid-list';
 // Modulo de FlexLayout
 import {FlexLayoutModule} from '@angular/flex-layout';
 import {MatButtonModule} from '@angular/material/button';
@@ -32,7 +30,7 @@ import {MatCardModule} from '@angular/material/card';
 
 
 @NgModule({
-  exports: [MatGridListModule],
+  exports: [],
   declarations: [
     AppComponent,
     HeaderComponent,
@@ -43,12 +41,11 @@ import {MatCardModule} from '@angular/material/card';
     BarTotalComponent,
     MenuComponent,
   
-    
+  
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MatGridListModule,
     FlexLayoutModule,
     MatButtonModule,
     MatSidenavModule,
