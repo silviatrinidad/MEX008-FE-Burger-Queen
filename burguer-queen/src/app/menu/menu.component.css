@@ -1,7 +1,16 @@
 *{
     font-family: Barlow Semi Condensed, Bold Italic;
     font-size: 25px;
+    margin: 0;
+    padding: 0;
 }
+
+.example-container{
+    width: 100vw;
+    height: 100vw;
+    margin:0;
+    padding: 0;
+  }
 
 .container{
     padding: 0;
@@ -9,6 +18,7 @@
     height: 100vh;
     width: 100vw;
     justify-content: space-between;
+    position: fixed;
     /* background: green; */
 }
 

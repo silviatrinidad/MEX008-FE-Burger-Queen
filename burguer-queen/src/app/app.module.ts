@@ -64,5 +64,4 @@ import {MatCardModule} from '@angular/material/card';
 })
 export class AppModule { }
 
-platformBrowserDynamic().bootstrapModule(AppModule);
 
