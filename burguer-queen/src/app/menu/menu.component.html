@@ -5,7 +5,7 @@
     </div>
 
     <div class="buttons-list">
-    <ol>
+    <ol class="buttons-list2">
     <button type="button" mat-button (click)="drawer.toggle()">
     Hamburguesas
     </button>
@@ -26,22 +26,29 @@
 </div>
     
 <div class="container2" fxLayout="column" fxLayoutAlign="center center">
-<mat-drawer-container class="example-container" autosize fxLayout="row" fxLayoutAlign="center center">
+<mat-drawer-container class="example-container" autosize fxLayout="column" fxLayoutAlign="center center">
     <mat-drawer #drawer class="example-sidenav" mode="side" fxLayout="row" fxLayoutAlign="center center">
-        <ol fxLayout="column" fxLayoutAlign="center center">
-        <button (click)="showFiller = !showFiller" mat-raised-button class="button-menu" >
-            Soberbia
-        </button>
-        <button (click)="showFiller = !showFiller" mat-raised-button class="button-menu">
-        Malicia
-        </button>
+        <div fxLayout="column" fxLayoutAlign="center center" class="list-hamburguer">
+        <div fxLayout="row" fxLayoutAlign="space-around center">
+            <button (click)="showFiller = !showFiller" mat-raised-button class="button-menu">
+                Soberbia
+            </button>
+            <button (click)="showFiller = !showFiller" mat-raised-button class="button-menu">
+                Malicia
+            </button>
+        </div>
+
+        <br>
+        <div fxLayout="row" fxLayoutAlign="space-around center">
         <button (click)="showFiller = !showFiller" mat-raised-button class="button-menu">
             Gula
         </button>
+        <br>
         <button (click)="showFiller = !showFiller" mat-raised-button class="button-menu">
             Encarnación
         </button>
-        </ol>
+        </div>
+        </div>
     </mat-drawer>
 
     <mat-drawer #drawer2 class="example-sidenav" mode="side">
@@ -49,11 +56,9 @@
             Gula
     </button>
     </mat-drawer>
-
-
 </mat-drawer-container>
 </div>
-
+<ng-content></ng-content>
 </div>
       
 
