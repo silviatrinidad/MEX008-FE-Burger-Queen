@@ -19,7 +19,7 @@ import { TakeOrderComponent } from './take-order/take-order.component';
 import { BillComponent } from './bill/bill.component';
 import { BillClientComponent } from './bill-client/bill-client.component';
 import { MenuComponent} from './menu/menu.component';
-import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
+// import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
 import {MatMenuModule} from '@angular/material/menu';
 import { FormsModule } from '@angular/forms';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -29,7 +29,7 @@ import {MatCardModule} from '@angular/material/card';
 import {MatRadioModule} from '@angular/material/radio';
 import { ModalPayCashComponent } from './bill-client/bill-client.component'
 import {MatDialogModule} from '@angular/material/dialog'; 
-
+import {MatGridListModule} from '@angular/material/grid-list';
 
 
 
@@ -64,7 +64,8 @@ import {MatDialogModule} from '@angular/material/dialog';
     MatIconModule,
     MatCardModule,
     MatRadioModule,
-    MatDialogModule
+    MatDialogModule,
+    MatGridListModule
     
   ],
   providers: [
