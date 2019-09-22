@@ -1,27 +1,66 @@
-<div class="container" fxLayout = "row"> 
-    <div class="container2" fxLayout = "column" fxLayoutAlign = "start">
-        <div class="menu-section">
-            <img src="./assets/logo.png" alt="">
-            <mat-toolbar>
-            <button class="mdl-button" [matMenuTriggerFor]="basic">
-            Hamburguesas
+<div class="container" fxLayout="row" fxLayoutAlign="start">
+<div class="example-sidenav-content" fxLayout="column" fxLayoutAlign="center center">
+    <div fxLayout="row" fxLayoutAlign="center" class="image">
+        <img src="./assets/logo.png" alt="">
+    </div>
+
+    <div class="buttons-list">
+    <ol class="buttons-list2">
+    <button type="button" mat-button (click)="drawer.toggle()">
+    Hamburguesas
+    </button>
+    <button type="button" mat-button (click)="drawer2.toggle()">
+        Pizza
+    </button>
+    <button type="button" mat-button (click)="drawer.toggle()">
+        Ensalada
+    </button>
+    <button type="button" mat-button (click)="drawer.toggle()">
+        Bebida
+    </button>
+    <button type="button" mat-button (click)="drawer.toggle()">
+        Paquetes
+    </button>
+    </ol>
+    </div>
+</div>
+    
+<div class="container2" fxLayout="column" fxLayoutAlign="center center">
+<mat-drawer-container class="example-container" autosize fxLayout="column" fxLayoutAlign="center center">
+    <mat-drawer #drawer class="example-sidenav" mode="side" fxLayout="row" fxLayoutAlign="center center">
+        <div fxLayout="column" fxLayoutAlign="center center" class="list-hamburguer">
+        <div fxLayout="row" fxLayoutAlign="space-around center">
+            <button (click)="showFiller = !showFiller" mat-raised-button class="button-menu">
+                Soberbia
             </button>
-            </mat-toolbar>
-            <mat-menu #basic="matMenu">
-                    <button mat-menu-item  (click)="select('Basic.Item1')">Basic.Item1</button>
-            </mat-menu>
+            <button (click)="showFiller = !showFiller" mat-raised-button class="button-menu">
+                Malicia
+            </button>
         </div>
 
-    </div>    
-<div fxLayout = "column" fxLayoutAlign = "start">
-    <ng-content></ng-content>
+        <br>
+        <div fxLayout="row" fxLayoutAlign="space-around center">
+        <button (click)="showFiller = !showFiller" mat-raised-button class="button-menu">
+            Gula
+        </button>
+        <br>
+        <button (click)="showFiller = !showFiller" mat-raised-button class="button-menu">
+            Encarnación
+        </button>
+        </div>
+        </div>
+    </mat-drawer>
+
+    <mat-drawer #drawer2 class="example-sidenav" mode="side">
+    <button (click)="showFiller = !showFiller" mat-raised-button class="button-menu">
+            Gula
+    </button>
+    </mat-drawer>
+</mat-drawer-container>
 </div>
+<ng-content></ng-content>
 </div>
-
-
-
-
-
+      
 
 
 

@@ -50,6 +50,11 @@
     font-size: 20px;
   }
 
+  .mat-drawer-container .list-administrator ul li a:hover{
+    background: #FFE867;
+    border-radius: 5px;
+  }
+
   .mat-drawer-container .list-administrator ul li {
     list-style: none;
   }

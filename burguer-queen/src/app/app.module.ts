@@ -7,8 +7,6 @@ import {HeaderComponent} from './header/header.component';
 // Módulo de animación
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {PruebaComponent} from './prueba/prueba.component';
-// Módulo de grid
-import {MatGridListModule} from '@angular/material/grid-list';
 // Modulo de FlexLayout
 import {FlexLayoutModule} from '@angular/flex-layout';
 import {MatButtonModule} from '@angular/material/button';
@@ -36,7 +34,7 @@ import {MatDialogModule} from '@angular/material/dialog';
 
 
 @NgModule({
-  exports: [MatGridListModule],
+  exports: [],
   declarations: [
     AppComponent,
     HeaderComponent,
@@ -50,12 +48,11 @@ import {MatDialogModule} from '@angular/material/dialog';
     MenuComponent,
     ModalPayCashComponent,
   
-    
+  
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MatGridListModule,
     FlexLayoutModule,
     MatButtonModule,
     MatSidenavModule,
@@ -77,4 +74,4 @@ import {MatDialogModule} from '@angular/material/dialog';
 })
 export class AppModule { }
 
-platformBrowserDynamic().bootstrapModule(AppModule);
+
