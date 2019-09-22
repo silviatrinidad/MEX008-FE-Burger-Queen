@@ -16,6 +16,8 @@ import {MatListModule} from '@angular/material/list';
 // Componentes que contienen la pagina de las mesas-barras y la comanda respectivamente
 import { InitContainerComponent } from './init-container/init-container.component';
 import { TakeOrderComponent } from './take-order/take-order.component';
+import { BillComponent } from './bill/bill.component';
+import { BillClientComponent } from './bill-client/bill-client.component';
 import { MenuComponent} from './menu/menu.component';
 import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
 import {MatMenuModule} from '@angular/material/menu';
@@ -24,7 +26,9 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { BarTotalComponent } from './bar-total/bar-total.component';
 import {MatCardModule} from '@angular/material/card';
-
+import {MatRadioModule} from '@angular/material/radio';
+import { ModalPayCashComponent } from './bill-client/bill-client.component'
+import {MatDialogModule} from '@angular/material/dialog'; 
 
 
 
@@ -38,8 +42,11 @@ import {MatCardModule} from '@angular/material/card';
     LateralBarComponent,
     InitContainerComponent,
     TakeOrderComponent,
+    BillComponent,
+    BillClientComponent,
     BarTotalComponent,
     MenuComponent,
+    ModalPayCashComponent,
   
   
   ],
@@ -55,11 +62,14 @@ import {MatCardModule} from '@angular/material/card';
     FormsModule,
     MatToolbarModule,
     MatIconModule,
-    MatCardModule
-
+    MatCardModule,
+    MatRadioModule,
+    MatDialogModule
+    
   ],
-  
-  providers: [],
+  providers: [
+   
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,0 +1,43 @@
+
+<link href="https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="//storage.googleapis.com/code.getmdl.io/1.0.1/material.teal-red.min.css" />
+<script src="//storage.googleapis.com/code.getmdl.io/1.0.1/material.min.js"></script>
+
+
+<div  fxLayout = "row"  fxLayoutAlign = "center center" class="">
+  <mat-grid-list cols="3" rowHeight="100px" class="container-bill">
+    <mat-grid-tile [colspan]=3 [rowspan]=1 class="tile" id="place">  
+      <div fxLayout="row"  class="options" fxLayoutAlign="space-around">
+        <div >Mesa 1</div>
+        <div>Precio</div>  
+      </div>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]=2 [rowspan]=4  class="tile"> 
+      <div fxLayout="column" fxLayoutGap="20px" class="options">
+        <mat-radio-group  class="radio-group">
+          <mat-radio-button class="radio-button" *ngFor="let pay of pays" >
+            {{pay}}
+          </mat-radio-button>
+        </mat-radio-group>
+        <mat-radio-group  class="radio-group">
+          <mat-radio-button class="radio-button" *ngFor="let percentage of percentages">
+            {{percentage}}
+          </mat-radio-button>
+        </mat-radio-group>
+         
+      </div> 
+    </mat-grid-tile>
+      <mat-grid-tile [colspan]=1 [rowspan]=4 class="tile"> 
+        <div  fxLayout = "column"  fxLayoutAlign = "center center" class="" fxLayoutGap="20px">
+          <button   (click)="openDialog()" >EFECTIVO</button>
+          <button   routerLinkActive="active"   routerLink="/">TARJETA</button> 
+          <!-- <button class="mdl-button mdl-button--raised" routerLinkActive="active"   routerLink="/take-order">Mesa 1</button>
+          <button class="mdl-button mdl-button--raised" routerLinkActive="active"   routerLink="/take-order">Mesa 2</button> -->
+      </div>            
+     </mat-grid-tile>    
+  </mat-grid-list>
+
+<ng-content ></ng-content>
+
+</div> 
