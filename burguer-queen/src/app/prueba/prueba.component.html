@@ -5,9 +5,9 @@
     <div  fxLayout = "row"  fxLayoutAlign = "center center" class="btn-circule">
         <button class="mdl-button mdl-button--fab" id="change-color" routerLinkActive="active"   routerLink="/take-order">1</button>
         <!-- silvia -->
-        <button (click)= "save($event)" [style.background-color]= "isActive ? 'green' : 'blue'"class="mdl-button mdl-button--fab" routerLinkActive="active"   routerLink="/take-order">2</button>
+        <button (click)= "save($event)" [style.background-color]= "isActive ? 'green' : 'blue'" class="mdl-button mdl-button--fab" routerLinkActive="active"   routerLink="/take-order">2</button>
         <button class="mdl-button mdl-button--fab" routerLinkActive="active"   routerLink="/take-order">3</button>
-        <button class="mdl-button mdl-button--fab" routerLinkActive="active"   routerLink="/take-order">4</button>
+        <button [style.background-color]= "isActive ? 'green' : 'blue'" class="mdl-button mdl-button--fab" routerLinkActive="active"   routerLink="/take-order">4</button>
     </div>
     <br>
     <br>

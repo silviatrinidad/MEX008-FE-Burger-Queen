@@ -16,8 +16,11 @@ export interface Tile {
   styleUrls: ['prueba.component.css'],
 })
 export class PruebaComponent {
-  tiles: Tile[] = [
-  ];
-  
+  tiles: Tile[] = [];
+//silvia
+  isActive = true;
+  save(e) {
+      console.log('Le diste click al boton 2');
+    }
 
 }
