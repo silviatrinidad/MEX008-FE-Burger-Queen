@@ -15,17 +15,24 @@ import {MatButtonModule} from '@angular/material/button';
 import {LateralBarComponent} from './lateral-bar/lateral-bar.component';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list';
-//Componentes que contienen la pagina de las mesas-barras y la comanda respectivamente
+// Componentes que contienen la pagina de las mesas-barras y la comanda respectivamente
 import { InitContainerComponent } from './init-container/init-container.component';
 import { TakeOrderComponent } from './take-order/take-order.component';
-import { MenuComponent } from './menu/menu.component';
-import { Component, OnInit } from '@angular/core';
-// import { Prueba2Component } from './prueba2/prueba2.component';
+import { MenuComponent} from './menu/menu.component';
+import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
+import {MatMenuModule} from '@angular/material/menu';
+import { FormsModule } from '@angular/forms';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
+import { BarTotalComponent } from './bar-total/bar-total.component';
+import {MatCardModule} from '@angular/material/card';
+
+
 
 
 
 @NgModule({
-  exports:[MatGridListModule],
+  exports: [MatGridListModule],
   declarations: [
     AppComponent,
     HeaderComponent,
@@ -33,7 +40,9 @@ import { Component, OnInit } from '@angular/core';
     LateralBarComponent,
     InitContainerComponent,
     TakeOrderComponent,
+    BarTotalComponent,
     MenuComponent,
+  
     
   ],
   imports: [
@@ -45,9 +54,18 @@ import { Component, OnInit } from '@angular/core';
     MatSidenavModule,
     BrowserAnimationsModule,
     MatListModule,
-    
+    MatMenuModule,
+    FormsModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatCardModule
+
   ],
+  
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+platformBrowserDynamic().bootstrapModule(AppModule);
+

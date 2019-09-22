@@ -1,30 +1,31 @@
-<mat-drawer-container class="container" fxLayout = "column"  fxLayoutAlign = "space-around start">
-    <mat-drawer mode="side" opened class="drawer-content" fxLayout = "column"  fxLayoutAlign = "space-around start">
-
-
-        <div>
-        <img src="./assets/logo.png" alt="">
-        </div>
-        <br>
-        <br>
-        <br>
-        <br>
-        <!-- Lista de enlaces de la sidenav -->
-        <div class="menu" fxLayout = "column"  fxLayoutAlign = "space-around start">
-          <ul fxLayout = "column"  fxLayoutAlign = "center space-between">
-            <li><a href="">Hamburguesa</a></li>
-            <br>
-            <li><a href="">Pizza</a></li>
-            <br>
-            <li><a href="">Ensalada</a></li>
-            <br>
-            <li><a href="">Bebidas</a></li>
-            <br>
-            <li><a href="">Paquetes</a></li>
-          </ul>
+<div class="container" fxLayout = "row"> 
+    <div class="container2" fxLayout = "column" fxLayoutAlign = "start">
+        <div class="menu-section">
+            <img src="./assets/logo.png" alt="">
+            <mat-toolbar>
+            <button class="mdl-button" [matMenuTriggerFor]="basic">
+            Hamburguesas
+            </button>
+            </mat-toolbar>
+            <mat-menu #basic="matMenu">
+                    <button mat-menu-item  (click)="select('Basic.Item1')">Basic.Item1</button>
+            </mat-menu>
         </div>
 
-    </mat-drawer>
-    <mat-drawer-content class="main-content">Main content</mat-drawer-content>
+    </div>    
+<div fxLayout = "column" fxLayoutAlign = "start">
+    <ng-content></ng-content>
+</div>
+</div>
 
-</mat-drawer-container>
+
+
+
+
+
+
+
+
+
+
+
