@@ -1,46 +1,64 @@
 *{
     font-family: Barlow Semi Condensed, Bold Italic;
-    font-size: 25px;
-    margin: 0;
-    padding: 0;
+    background: #F0F0F0;
+    font-size: 16px;
 }
-
-.example-container{
-    width: 100vw;
-    height: 100vw;
-    margin:0;
-    padding: 0;
-  }
 
 .container{
-    padding: 0;
     margin: 0;
-    height: 100vh;
+    padding: 0;
     width: 100vw;
-    justify-content: space-between;
-    position: fixed;
-    /* background: green; */
 }
 
+.example-container {
+    margin:0;
+    padding: 0px;
+    width: 25vw;
+    height: 20vh;
+    
+  }
+  
+  .example-sidenav-content {
+    width: 13vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    border:2px solid black;
+    border-radius: 0 70px 70px 0;
+  }
+  
+  .example-sidenav {
+    padding: 0;
+    margin: 0;
+    border: 1px white solid;
+    background: #F7F7F7;
+    width: 50vw;
+  }
 
 .container2{
+    margin:0;
+    padding: 0px;
+    width: 25vw;
+    height: 100vh;
+}
+
+.button-menu{
+    font-size: 30px;
+    border: 1px solid black;
+    margin: 0;
+    padding: 0;
+}
+
+.image{
+    width: 10vw;
+}
+
+.buttons-list ol button:hover{
+    background: #FFE867;
+    border-radius: 30px;
+}
+
+/* .list-hamburguer{
     padding: 0;
     margin: 0;
-    height: 100vh;
-    width: 30vw;
-    /* background: green; */
-}
-
-
-.menu-section{
-    background: pink;
-}
-
-mat-toolbar{
-    background: aqua;
-}
-
-.button-hamburguer{
-    width: 100vw;
-    height: 100vh;
-}
+} */
