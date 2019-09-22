@@ -19,10 +19,8 @@ import {MatListModule} from '@angular/material/list';
 import { InitContainerComponent } from './init-container/init-container.component';
 import { TakeOrderComponent } from './take-order/take-order.component';
 import { BarTotalComponent } from './bar-total/bar-total.component';
-import {MatIconModule} from "@angular/material/icon";
-
-
-
+import {MatIconModule} from '@angular/material/icon';
+import {MenuComponent} from './menu/menu.component';
 
 
 @NgModule({
