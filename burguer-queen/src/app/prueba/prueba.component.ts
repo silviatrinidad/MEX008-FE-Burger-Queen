@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, ViewChild, ElementRef} from '@angular/core';
 
 export interface Tile {
   color: string;
@@ -18,6 +18,6 @@ export interface Tile {
 export class PruebaComponent {
   tiles: Tile[] = [
   ];
+  
+
 }
-
-
