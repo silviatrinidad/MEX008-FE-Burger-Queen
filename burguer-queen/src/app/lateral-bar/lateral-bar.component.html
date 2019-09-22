@@ -1,13 +1,15 @@
-<mat-drawer-container class="example-container" autosize>
-  <mat-drawer #drawer class="example-sidenav" mode="side">
-  <div>
+<mat-drawer-container class="example-container" autosize fxLayout = "column"  fxLayoutAlign = "space-around start">
+  <mat-drawer #drawer class="example-sidenav" mode="side" fxLayout = "column"  fxLayoutAlign = "space-around start">
+  <div fxLayout = "column"  fxLayoutAlign = "center center">
     <img src="./assets/logo.png" alt="">
-    <p class="administrator">ADMINISTRADOR</p>
+  <button class = "button-administrator" type="button"  (click)="drawer.toggle()" fxLayout = "row"  fxLayoutAlign = "center start">
+        ADMINISTRADOR
+  </button>
   </div>
-
+<br>
 <!-- Lista de enlaces de la sidenav -->
-<div class="list-administrator">
-  <ul>
+<div class="list-administrator" fxLayout = "row"  fxLayoutAlign = "space-around start">
+  <ul fxLayout = "column"  fxLayoutAlign = "space-around start">
     <li><a href="">Estadísticas</a></li>
     <li><a href="">Inventario</a></li>
     <li><a href="">Calendario</a></li>
@@ -26,7 +28,6 @@
     </button>
     </div>
   <ng-content></ng-content>
-
   </div>
 
 </mat-drawer-container>

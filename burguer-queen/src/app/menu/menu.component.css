@@ -1,0 +1,36 @@
+*{
+    font-family: Barlow Semi Condensed, Bold Italic;
+    font-size: 25px;
+}
+
+.container{
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    justify-content: space-between;
+    /* background: green; */
+}
+
+
+.container2{
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    width: 30vw;
+    /* background: green; */
+}
+
+
+.menu-section{
+    background: pink;
+}
+
+mat-toolbar{
+    background: aqua;
+}
+
+.button-hamburguer{
+    width: 100vw;
+    height: 100vh;
+}

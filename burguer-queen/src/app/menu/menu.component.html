@@ -1,0 +1,31 @@
+<div class="container" fxLayout = "row"> 
+    <div class="container2" fxLayout = "column" fxLayoutAlign = "start">
+        <div class="menu-section">
+            <img src="./assets/logo.png" alt="">
+            <mat-toolbar>
+            <button class="mdl-button" [matMenuTriggerFor]="basic">
+            Hamburguesas
+            </button>
+            </mat-toolbar>
+            <mat-menu #basic="matMenu">
+                    <button mat-menu-item  (click)="select('Basic.Item1')">Basic.Item1</button>
+            </mat-menu>
+        </div>
+
+    </div>    
+<div fxLayout = "column" fxLayoutAlign = "start">
+    <ng-content></ng-content>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
