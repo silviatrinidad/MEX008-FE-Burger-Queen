@@ -1,11 +1,11 @@
 <div class="container" fxLayout="row" fxLayoutAlign="start">
 <div class="example-sidenav-content" fxLayout="column" fxLayoutAlign="center center">
-    <div fxLayout="row" fxLayoutAlign="center" class="image">
+    <div fxLayout="column" fxLayoutAlign="center center" class="image">
         <img src="./assets/logo.png" alt="">
     </div>
 
-    <div class="buttons-list">
-    <ol class="buttons-list2">
+    <div class="buttons-list" >
+    <ol class="buttons-list2" fxLayout="column" fxLayoutAlign="center center">
     <button type="button" mat-button (click)="drawer.toggle()">
     Hamburguesas
     </button>
@@ -26,10 +26,10 @@
 </div>
     
 <div class="container2" fxLayout="column" fxLayoutAlign="center center">
-<mat-drawer-container class="example-container" autosize fxLayout="column" fxLayoutAlign="center center">
+<mat-drawer-container class="example-container" autosize fxLayout="column" fxLayoutAlign="center start">
     <mat-drawer #drawer class="example-sidenav" mode="side" fxLayout="row" fxLayoutAlign="center center">
-        <div fxLayout="column" fxLayoutAlign="center center" class="list-hamburguer">
-        <div fxLayout="row" fxLayoutAlign="space-around center">
+        <div class="container-hamburguers">
+        <div fxLayout="row" fxLayoutAlign="space-around start" class="list-hamburguer">
             <button (click)="showFiller = !showFiller" mat-raised-button class="button-menu">
                 Soberbia
             </button>
@@ -37,18 +37,15 @@
                 Malicia
             </button>
         </div>
-
-        <br>
-        <div fxLayout="row" fxLayoutAlign="space-around center">
+        <div fxLayout="row" fxLayoutAlign="space-around end" class="list-hamburguer">
         <button (click)="showFiller = !showFiller" mat-raised-button class="button-menu">
             Gula
         </button>
-        <br>
         <button (click)="showFiller = !showFiller" mat-raised-button class="button-menu">
             Encarnación
         </button>
         </div>
-        </div>
+    </div>
     </mat-drawer>
 
     <mat-drawer #drawer2 class="example-sidenav" mode="side">

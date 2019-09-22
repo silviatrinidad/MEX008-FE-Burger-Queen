@@ -14,8 +14,8 @@
 .example-container {
     margin:0;
     padding: 0px;
-    width: 25vw;
-    height: 40vh;
+    width: 60vw;
+    height: 16vh;
     
   }
   
@@ -34,7 +34,7 @@
     margin: 0;
     /* border: 1px white solid; */
     background: #F7F7F7;
-    width: 30vw;
+    width: 60vw;
     height: 40vh;
   }
 
@@ -47,11 +47,16 @@
 
 .button-menu{
     font-size: 15px;
-    border: 1px solid black;
+    border: 1px solid white;
     margin: 0;
-    padding: 7px;
+    padding: 0px;
     background: white;
-    border-radius: 5px;
+    border-radius: 10px;
+    height: 5vh;
+    width: 10vw;
+    justify-content: start;
+    align-content: flex-start;
+    font-weight: bold;
 }
 
 .image{
@@ -68,9 +73,25 @@
     padding: 0;
     margin: 0;
     width: 30vw;
-    height: 40vh;
+    height: 8vh;
+    /* border: 2px solid white; */
 }
 
 .buttons-list2{
     background: #F7F7F7;
+}
+
+.buttons-list ol{
+    width: 13vw;
+    height: 50vh;
+    margin: 0;
+    padding: 0;
+}
+
+.container-hamburguers{
+    border: 1px solid white;
+    margin:0;
+    padding: 0;
+    width: 30vw;
+    height: 16vh;
 }
