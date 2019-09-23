@@ -27,13 +27,20 @@ import { MatIconModule } from '@angular/material/icon';
 import { BarTotalComponent } from './bar-total/bar-total.component';
 import {MatCardModule} from '@angular/material/card';
 import {MatRadioModule} from '@angular/material/radio';
-
+import { ModalPayCashComponent } from './bill-client/bill-client.component'
+// import {MatDialogModule} from '@angular/material/dialog'; 
 import {MatDialogModule} from '@angular/material/dialog'; 
 import {MatGridListModule} from '@angular/material/grid-list';
 // import { OrderListComponent } from './order-list/order-list.component';
 import { OrdersComponent } from './orders/orders.component';
 import { ModalDialogBillComponent } from './modal-dialog-bill/modal-dialog-bill.component';
 
+//Yael
+import { StateOrdenComponent } from './state-orden/state-orden.component'
+import { MatDialogModule, MatBadgeModule } from '@angular/material';
+import { DialogStatusOrdenComponent } from './dialog-status-orden/dialog-status-orden.component';
+import { OrdenPayComponent } from './orden-pay/orden-pay.component';
+//
 
 
 @NgModule({
@@ -52,12 +59,21 @@ import { ModalDialogBillComponent } from './modal-dialog-bill/modal-dialog-bill.
     ModalDialogBillComponent,
     OrderListComponent,
     ModalPayCashComponent,
+    StateOrdenComponent,
+    DialogStatusOrdenComponent,
+    OrdenPayComponent, 
+  
+  ],
+  //Yael
+  entryComponents: [DialogStatusOrdenComponent,ModalDialogBillComponent],
+  //Yael
+
     OrdersComponent,
     ModalDialogBillComponent,
   
   
   ],
-  entryComponents:[ModalDialogBillComponent],
+
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -73,8 +89,9 @@ import { ModalDialogBillComponent } from './modal-dialog-bill/modal-dialog-bill.
     MatCardModule,
     MatRadioModule,
     MatDialogModule,
-    MatGridListModule
-    
+    MatGridListModule,
+    //Yael
+    MatBadgeModule    
   ],
   providers: [
    
