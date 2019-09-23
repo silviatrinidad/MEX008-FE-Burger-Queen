@@ -32,7 +32,7 @@ import {MatDialogModule} from '@angular/material/dialog';
 import {MatGridListModule} from '@angular/material/grid-list';
 // import { OrderListComponent } from './order-list/order-list.component';
 import { OrdersComponent } from './orders/orders.component';
-
+import {MatTableModule} from '@angular/material/table';
 
 
 @NgModule({
@@ -69,7 +69,8 @@ import { OrdersComponent } from './orders/orders.component';
     MatCardModule,
     MatRadioModule,
     MatDialogModule,
-    MatGridListModule
+    MatGridListModule,
+    MatTableModule
     
   ],
   providers: [

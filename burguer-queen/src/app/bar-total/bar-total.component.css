@@ -23,8 +23,64 @@
 .main p{
   font-size:25px;
   font-weight: bold;
+  margin: 10px;
+  padding: 0;
 }
 
-.button-person{
-  background: white;
+.mdl-button--fab{
+  padding: 0;
+  margin: 0;
+  border-radius: 50px;
 }
+
+.name-order p{
+  margin: 0;
+  padding: 0;
+}
+
+.person-order p{
+  margin: 0;
+  padding: 0;
+  width: 10vw;
+  height: 5vh;
+  background: #FFE867;
+  opacity: .29;
+}
+
+.person-order2 p{
+  margin: 0;
+  padding: 0;
+  width: 10vw;
+  height: 5vh;
+  background: #FFE867;
+  opacity: .29;
+}
+
+
+.person-order{
+  width: 20vw;
+  height: 30vh;
+}
+
+/* .count p{
+  margin: 0;
+  padding: 0;
+  width: 10vw;
+}
+
+.total p{
+  margin: 0;
+  padding: 0;
+  width: 8vw;
+}
+
+.count{
+  width: 20vw;
+  height: 4vh;
+}
+
+.total{
+  width: 20vw;
+  height: 4vh;
+} */
+
