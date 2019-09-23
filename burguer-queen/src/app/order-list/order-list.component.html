@@ -1,1 +1,27 @@
-<p>order-list works!</p>
+<!-- <div class="container" >
+        <div class="container2" layout="column" fxlayoutalign="center center">
+          <p>Mesa 1 </p>
+          <p>Orden #<span></span></p>
+      
+      
+          <table>
+            <thead>
+            <tr>
+              <th>Order</th>
+              <th>Persona 1</th>
+              <th>$00.00</th>
+            </tr>
+            </thead>
+      
+            <tbody>
+            <tr *ngFor="let order of hamburguesaOrders"><td>{{ order.payload.doc.data().orderNumber }}</td>
+              <td>{{ order.payload.doc.data().customerName }}</td>
+              <td><span *ngFor="let hamburguesa of order.payload.doc.data().hamburguesaOrder"> {{ hamburguesa }}</span></td>
+              <td [hidden]="order.payload.doc.data().completed" (click)="markCompleted(order)"><mat-icon>done</mat-icon></td>
+              <td [hidden]="order.payload.doc.data().completed" (click)="deleteOrder(order)"><mat-icon>delete_sweep</mat-icon></td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      
+      </div> -->
