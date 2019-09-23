@@ -7,11 +7,13 @@ import { Routes, RouterModule } from '@angular/router';
 import { TakeOrderComponent} from './take-order/take-order.component';
 import { InitContainerComponent } from './init-container/init-container.component';
 import { BillComponent } from './bill/bill.component';
+import { OrdersComponent } from './orders/orders.component'
 const routes: Routes = [
   //DEfinnir las rutas y los componentes a llamar
   {path:'' , component: InitContainerComponent },
   {path:'take-order' , component: TakeOrderComponent },
-  {path:'bill' , component: BillComponent }
+  {path:'bill' , component: BillComponent },
+  {path:'orders', component: OrdersComponent}
 ];
 
 @NgModule({

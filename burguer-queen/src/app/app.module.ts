@@ -30,7 +30,7 @@ import {MatRadioModule} from '@angular/material/radio';
 import { ModalPayCashComponent } from './bill-client/bill-client.component'
 import {MatDialogModule} from '@angular/material/dialog'; 
 import {MatGridListModule} from '@angular/material/grid-list';
-import { OrderListComponent } from './order-list/order-list.component';
+// import { OrderListComponent } from './order-list/order-list.component';
 import { OrdersComponent } from './orders/orders.component';
 
 
@@ -49,7 +49,7 @@ import { OrdersComponent } from './orders/orders.component';
     BarTotalComponent,
     MenuComponent,
     ModalPayCashComponent,
-    OrderListComponent,
+    // OrderListComponent,
     OrdersComponent,
   
   

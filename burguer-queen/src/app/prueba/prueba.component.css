@@ -1,6 +1,6 @@
 button{
-    margin: 18px;
-    padding: 5px;
+    margin: 9px;
+    padding: 0;
     background: #C9C9C9;
 }
 
@@ -8,18 +8,37 @@ div .mdl-button--raised{
     height: 80px;
     width: 80px;
     padding: 0;
+    margin: 9px;
 }
 
 div .rectangule{
     height: 80px;
     width: 100px;
+    padding: 0;
 }
 
 .container{
-    height: 90vh;
-    width: 80vw;
+    height: 60vh;
+    width: 72vw;
     padding: 0;
     margin: 0;
 }
+
+.container2{
+    height: 60vh;
+    width: 72vw;
+    padding: 0;
+    margin: 0;
+}
+
+.btn-circule, .btn-square, .btn-square-bg, .btn-square-bg2 {
+margin: 0;
+padding: 0;
+height: 10vh;
+}
+
+
+
+
 
 
