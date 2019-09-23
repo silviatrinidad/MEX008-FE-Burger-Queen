@@ -58,7 +58,6 @@ import { OrdenPayComponent } from './orden-pay/orden-pay.component';
     DialogStatusOrdenComponent,
     OrdenPayComponent, 
     OrdersComponent
-  
   ],
   //Yael
   entryComponents: [DialogStatusOrdenComponent,ModalDialogBillComponent],
