@@ -13,7 +13,7 @@ export class OrdersComponent implements OnInit {
   // constructor(private ordersService: OrdersService) {}
 
   //SILVIA
-  //AGREGANDO CONTADOR
+  //AGREGANDO CONTADOR  en orders
 cantidad = 0;
 sumar() {
   this.cantidad ++;
