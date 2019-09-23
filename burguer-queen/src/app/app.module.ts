@@ -35,6 +35,7 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import { StateOrdenComponent } from './state-orden/state-orden.component'
 import { MatDialogModule, MatBadgeModule } from '@angular/material';
 import { DialogStatusOrdenComponent } from './dialog-status-orden/dialog-status-orden.component';
+import { OrdenPayComponent } from './orden-pay/orden-pay.component';
 //
 
 
@@ -53,9 +54,13 @@ import { DialogStatusOrdenComponent } from './dialog-status-orden/dialog-status-
     MenuComponent,
     ModalPayCashComponent,
     StateOrdenComponent,
-    DialogStatusOrdenComponent, 
+    DialogStatusOrdenComponent,
+    OrdenPayComponent, 
   
   ],
+  //Yael
+  entryComponents: [DialogStatusOrdenComponent],
+  //Yael
   imports: [
     BrowserModule,
     AppRoutingModule,

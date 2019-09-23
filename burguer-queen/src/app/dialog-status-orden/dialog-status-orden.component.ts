@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './dialog-status-orden.component.html',
   styleUrls: ['./dialog-status-orden.component.css']
 })
-export class DialogStatusOrdenComponent implements OnInit {
+export class DialogStatusOrdenComponent{
 
   constructor() { }
 
