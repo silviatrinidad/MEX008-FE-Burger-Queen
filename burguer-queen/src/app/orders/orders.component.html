@@ -6,9 +6,9 @@
 
     <div fxLayout="row" fxLayoutAlign="start start" class="boxText">
       <p class="nameProduct">Malicia</p>
-      <button class="button-icon"><mat-icon>add_circle_outline</mat-icon></button>
-      <input type="number" class="placeholder">
-      <button class="button-icon"><mat-icon>remove_circle_outline</mat-icon></button> 
+      <button class="button-icon" (click)="sumar()"><mat-icon>add_circle_outline</mat-icon></button>
+      <div>{{cantidad}}</div>
+      <button class="button-icon" (click)="restar()"><mat-icon>remove_circle_outline</mat-icon></button> 
 
     </div>
 

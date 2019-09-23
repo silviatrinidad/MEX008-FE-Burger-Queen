@@ -12,6 +12,17 @@ import { Component, OnInit } from '@angular/core';
 export class OrdersComponent implements OnInit {
   // constructor(private ordersService: OrdersService) {}
 
+  //SILVIA
+  //AGREGANDO CONTADOR
+cantidad = 0;
+sumar() {
+  this.cantidad ++;
+}
+restar() {
+  this.cantidad --;
+}
+
+
   hamburguesas = [
     'Soberbia',
     'Malicia',
