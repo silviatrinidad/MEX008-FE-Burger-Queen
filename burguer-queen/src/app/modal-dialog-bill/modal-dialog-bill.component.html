@@ -1,0 +1,63 @@
+<h1 mat-dialog-title>EFECTIVO</h1>
+<div mat-dialog-content >
+  <ul>
+    <li>
+     Total por pagar :  <p></p>
+    </li>
+    <li>
+     Total con propina (10%): <p></p>
+    </li>
+    <li>
+     Paga con:  <p></p>
+    </li>
+    <li>
+      Cambio:  <p></p>
+    </li>
+  </ul>
+
+<div  fxLayout = "row"   fxLayoutAlign="space-around" class="">
+  <button mat-raised-button class="btn-cancel" > Cancelar</button>
+  <button mat-raised-button class="btn-pay">Pagar</button>
+</div>  
+<br>
+  <mat-grid-list cols="3" rowHeight="54px" class="container-bill">
+    
+      <mat-grid-tile [colspan]=1 [rowspan]=1 class="tile"> 
+        1 
+      </mat-grid-tile>    
+      <mat-grid-tile [colspan]=1 [rowspan]=1 class="tile" > 
+        2 
+      </mat-grid-tile>
+      <mat-grid-tile [colspan]=1 [rowspan]=1 class="tile"> 
+        3 
+      </mat-grid-tile>
+      <mat-grid-tile [colspan]=1 [rowspan]=1 class="tile">  
+        4
+      </mat-grid-tile>
+      <mat-grid-tile [colspan]=1 [rowspan]=1 class="tile" >  
+        5
+      </mat-grid-tile>
+      <mat-grid-tile [colspan]=1 [rowspan]=1 class="tile">
+        6  
+      </mat-grid-tile>
+      <mat-grid-tile [colspan]=1 [rowspan]=1 class="tile" >
+        7  
+      </mat-grid-tile>
+      <mat-grid-tile [colspan]=1 [rowspan]=1 class="tile">
+        8  
+      </mat-grid-tile>
+      <mat-grid-tile [colspan]=1 [rowspan]=1 class="tile">  
+        9
+      </mat-grid-tile>
+      <mat-grid-tile [colspan]=1 [rowspan]=1 class="tile gray">
+         
+      </mat-grid-tile>
+      <mat-grid-tile [colspan]=1 [rowspan]=1 class="tile " >
+        0
+      </mat-grid-tile>
+      <mat-grid-tile [colspan]=1 [rowspan]=1 class="tile gray">  
+        <img src="./assets/icons8-símbolo-vaciar-50.png" alt="delete">
+      </mat-grid-tile>
+  </mat-grid-list>
+
+</div>

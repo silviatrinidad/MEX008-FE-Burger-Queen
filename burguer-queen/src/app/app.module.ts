@@ -27,11 +27,12 @@ import { MatIconModule } from '@angular/material/icon';
 import { BarTotalComponent } from './bar-total/bar-total.component';
 import {MatCardModule} from '@angular/material/card';
 import {MatRadioModule} from '@angular/material/radio';
-import { ModalPayCashComponent } from './bill-client/bill-client.component'
+
 import {MatDialogModule} from '@angular/material/dialog'; 
 import {MatGridListModule} from '@angular/material/grid-list';
 // import { OrderListComponent } from './order-list/order-list.component';
 import { OrdersComponent } from './orders/orders.component';
+import { ModalDialogBillComponent } from './modal-dialog-bill/modal-dialog-bill.component';
 
 
 
@@ -48,12 +49,15 @@ import { OrdersComponent } from './orders/orders.component';
     BillClientComponent,
     BarTotalComponent,
     MenuComponent,
+    ModalDialogBillComponent,
+    OrderListComponent,
     ModalPayCashComponent,
-    // OrderListComponent,
     OrdersComponent,
+    ModalDialogBillComponent,
   
   
   ],
+  entryComponents:[ModalDialogBillComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
