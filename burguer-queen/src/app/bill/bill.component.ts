@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-
+import { Component, OnInit,Inject } from '@angular/core';
+import { MatDialog,MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 
 export interface Tile {
   color: string;
@@ -15,7 +15,12 @@ export interface Tile {
 })
 export class BillComponent implements OnInit {
 
-  constructor() { }
+  // constructor(public dialog: MatDialog) {
+    
+  //  }
+  //  openDialog(){
+  //    this.dialog.open();
+  //  }
 
   ngOnInit() {
   }

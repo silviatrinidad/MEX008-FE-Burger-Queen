@@ -5,9 +5,9 @@
     <div  fxLayout = "row"  fxLayoutAlign = "center center" class="btn-circule">
         <button class="mdl-button mdl-button--fab" id="change-color" routerLinkActive="active"   routerLink="/take-order">1</button>
         <!-- silvia -->
-        <button (click)= "save($event)" [style.background-color]= "isActive ? 'green' : 'blue'" class="mdl-button mdl-button--fab" routerLinkActive="active"   routerLink="/take-order">2</button>
+        <button (click)= "save($event)" [style.background-color]= "isActive ? '' : 'blue'" class="mdl-button mdl-button--fab" routerLinkActive="active"   routerLink="/take-order">2</button>
         <button class="mdl-button mdl-button--fab" routerLinkActive="active"   routerLink="/take-order">3</button>
-        <button [style.background-color]= "isActive ? 'green' : 'blue'" class="mdl-button mdl-button--fab" routerLinkActive="active"   routerLink="/take-order">4</button>
+        <button [style.background-color]= "isActive ? '' : 'blue'" class="mdl-button mdl-button--fab" routerLinkActive="active"   routerLink="/take-order">4</button>
     </div>
 
     <br>
@@ -35,16 +35,18 @@
         <button class="mdl-button mdl-button--fab" routerLinkActive="active"   routerLink="/take-order">9</button>
         <button class="mdl-button mdl-button--fab" routerLinkActive="active"   routerLink="/take-order"> 10</button>
         <button class="mdl-button mdl-button--fab" routerLinkActive="active"   routerLink="/take-order">11</button>
-        <button class="mdl-button mdl-button--fab" routerLinkActive="active"   routerLink="/take-order">12</button>
+        <button (click)= "save($event)" [style.background-color]= "isActive ? 'grey' : 'blue'" class="mdl-button mdl-button--fab" routerLinkActive="active"   routerLink="/bill">12</button>
     </div>
     <br>
     <br>
     <!-- Botones de mesas de pantalla inferior -->
-    <div  fxLayout = "row"  fxLayoutAlign = "center center">
+    <div  fxLayout = "row"  fxLayoutAlign = "center center" class="btn-square-bg2">
         <button class="mdl-button mdl-button--raised" routerLinkActive="active"   routerLink="/take-order">Mesa 4</button>
         <button class="mdl-button mdl-button--raised" routerLinkActive="active"   routerLink="/take-order">Mesa 5</button>
     </div>
     </div>
+
+
     
     
     

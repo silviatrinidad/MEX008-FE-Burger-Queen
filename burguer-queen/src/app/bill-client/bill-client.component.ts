@@ -1,9 +1,7 @@
 import { Component, OnInit, Inject} from '@angular/core';
 import { MatDialog,MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
+import { ModalDialogBillComponent } from '../modal-dialog-bill/modal-dialog-bill.component';
 
-export interface DialogData {
-  animal: 'panda' | 'unicorn' | 'lion';
-}
 @Component({
   selector: 'app-bill-client',
   templateUrl: './bill-client.component.html',
@@ -18,10 +16,8 @@ export class BillClientComponent {
   constructor(public dialog: MatDialog) {}
 
   openDialog() {
-    this.dialog.open(ModalPayCashComponent, {  
-      data: {
-        animal: 'panda'
-      }
+    this.dialog.open(ModalDialogBillComponent, {  
+  
     });
   }
 
@@ -34,11 +30,18 @@ export class BillClientComponent {
 
 
 
-@Component({
-  selector: 'modal-pay-cash-component',
-  templateUrl: '../modal-pay-cash.component.html',
+// @Component({
+//   selector: 'modal-pay-cash-component',
+//   templateUrl: './modal-dialog-bill/modal-dialog-bill.html',
+//   styleUrls: ['./modal-dialog-bill/modal-dialog-bill.css'] 
 
-})
-export class ModalPayCashComponent {
-  constructor(@Inject(MAT_DIALOG_DATA) public data: DialogData) {}
-}
+//  })
+// export class ModalDialogBillComponent {
+//   constructor(public dialogRef: MatDialogRef<ModalDialogBillComponent>,
+//     @Inject(MAT_DIALOG_DATA) public data: DialogData) {}
+
+//   onNoClick(): void {
+//     this.dialogRef.close();
+//   }
+
+// }
