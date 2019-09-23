@@ -1,56 +1,116 @@
 *{
     font-family: Barlow Semi Condensed, Bold Italic;
+    background: #6C727C;
+    font-size: 16px;
 }
 
-.container {
-    width: 50vw;
+.container{
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+.example-container {
+    margin:0;
+    padding: 0px;
+    width: 40vw;
+    height: 17vh;
+    background: #6C727C;
+    
+  }
+  
+  .example-sidenav-content {
+    width: 13vw;
     height: 100vh;
     margin: 0;
     padding: 0;
-    border: 1px solid red;
+    border:2px solid white;
+    /* border-radius: 0 70px 70px 0; */
+    background: #F7F7F7;
+  }
+  
+  .example-sidenav {
+    padding: 0;
+    margin: 0;
+    /* border: 1px white solid; */
+    background: #F7F7F7;
+    width: 60vw;
+    height: 17vh;
+  }
+
+.container2{
+    margin:0;
+    padding: 0px;
+    width: 62vw;
+    height: 100vh;
+    background: #6C727C;
 }
 
-.drawer-content{
-    width: 20%;
-    border: 2px solid black;
-    border-radius: 0 40px 40px 0;
+.button-menu{
+    font-size: 15px;
+    border: 1px solid white;
+    margin: 0;
+    padding: 0;
     background: white;
-}
-
-.main-content{
-    background: blue;
-}
-
-/* .container .drawer-content{
-background: yellow;
-} */
-
-.container .drawer-content .menu ul li{
-    text-decoration: none;
-    list-style: none;
-    background: white;
-    color: black;
+    border-radius: 10px;
+    height: 5vh;
+    width: 10vw;
+    justify-content: start;
+    align-content: flex-start;
 
 }
 
-.container .drawer-content .menu ul {
+.list-hamburguer .button-menu{
+color: black;
+font-weight: bold;
+background: white;
+}
+
+.image img{
+    width: 10vw;
+    height: 15vh;
+    background: #F7F7F7;
+}
+
+.buttons-list ol button:hover{
+    background: #FFE867;
+    border-radius: 30px;
+}
+
+.list-hamburguer{
+    padding: 0;
+    margin: 0;
+    width: 50vw;
+    height: 8vh;
+    background: #F7F7F7;
+    /* border: 2px solid white; */
+}
+
+.buttons-list2{
+    background: #F7F7F7;
     margin: 0;
     padding: 0;
 }
 
-.container .drawer-content .menu ul li a{
-    margin: 10px;
-    color: black;
-    font-size: 20px;
-    list-style: none;
-    font-size: 25px;
+.buttons-list ol{
+    width: 10vw;
+    height: 30vh;
+    margin: 0;
+    padding: 0;
 }
 
-.container .drawer-content .menu ul li a:hover{
-    background: #FFE867;
-    widows: 100%;
-    border-radius: 10px;
-    text-decoration: none;
-    
+.container-hamburguers{
+    border: 1px solid white;
+    margin:0;
+    padding: 0;
+    width: 30vw;
+    height: 16vh;
+    background: #F7F7F7;
 }
 
+.button-mat{ 
+    padding: 0;
+    margin: 0;
+    background: #F7F7F7;
+}

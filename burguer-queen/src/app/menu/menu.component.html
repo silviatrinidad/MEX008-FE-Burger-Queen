@@ -1,30 +1,67 @@
-<mat-drawer-container class="container" fxLayout = "column"  fxLayoutAlign = "space-around start">
-    <mat-drawer mode="side" opened class="drawer-content" fxLayout = "column"  fxLayoutAlign = "space-around start">
+<div class="container" fxLayout="row" fxLayoutAlign="start">
+<div class="example-sidenav-content" fxLayout="column" fxLayoutAlign="center center">
+    <div fxLayout="column" fxLayoutAlign="center center" class="image">
+        <img src="./assets/logo.png" alt="" >
+    </div>
 
-
-        <div>
-        <img src="./assets/logo.png" alt="">
+    <div class="buttons-list">
+    <ol class="buttons-list2" fxLayout="column" fxLayoutAlign="center center">
+    <button type="button" mat-button (click)="drawer.toggle()" class="button-mat">
+    Hamburguesas
+    </button>
+    <button type="button" mat-button (click)="drawer2.toggle()" class="button-mat">
+        Pizza
+    </button>
+    <button type="button" mat-button (click)="drawer.toggle()" class="button-mat">
+        Ensalada
+    </button>
+    <button type="button" mat-button (click)="drawer.toggle()" class="button-mat">
+        Bebida
+    </button>
+    <button type="button" mat-button (click)="drawer.toggle()" class="button-mat">
+        Paquetes
+    </button>
+    </ol>
+    </div>
+</div>
+    
+<div class="container2" fxLayout="column" fxLayoutAlign="center start">
+<mat-drawer-container class="example-container" autosize fxLayout="column" fxLayoutAlign="start center">
+    <mat-drawer #drawer class="example-sidenav" mode="side" fxLayout="row" fxLayoutAlign="start center">
+        <div class="container-hamburguers">
+        <div fxLayout="row" fxLayoutAlign="space-evenly start" class="list-hamburguer">
+            <button (click)="showFiller = !showFiller" mat-raised-button class="button-menu">
+                Soberbia
+            </button>
+            <button (click)="showFiller = !showFiller" mat-raised-button class="button-menu">
+                Malicia
+            </button>
         </div>
-        <br>
-        <br>
-        <br>
-        <br>
-        <!-- Lista de enlaces de la sidenav -->
-        <div class="menu" fxLayout = "column"  fxLayoutAlign = "space-around start">
-          <ul fxLayout = "column"  fxLayoutAlign = "center space-between">
-            <li><a href="">Hamburguesa</a></li>
-            <br>
-            <li><a href="">Pizza</a></li>
-            <br>
-            <li><a href="">Ensalada</a></li>
-            <br>
-            <li><a href="">Bebidas</a></li>
-            <br>
-            <li><a href="">Paquetes</a></li>
-          </ul>
+        <div fxLayout="row" fxLayoutAlign="space-evenly end" class="list-hamburguer">
+        <button (click)="showFiller = !showFiller" mat-raised-button class="button-menu">
+            Gula
+        </button>
+        <button (click)="showFiller = !showFiller" mat-raised-button class="button-menu">
+            Encarnación
+        </button>
         </div>
-
+    </div>
     </mat-drawer>
-    <mat-drawer-content class="main-content">Main content</mat-drawer-content>
 
+    <mat-drawer #drawer2 class="example-sidenav" mode="side">
+    <button (click)="showFiller = !showFiller" mat-raised-button class="button-menu">
+            Gula
+    </button>
+    </mat-drawer>
 </mat-drawer-container>
+</div>
+<ng-content></ng-content>
+</div>
+      
+
+
+
+
+
+
+

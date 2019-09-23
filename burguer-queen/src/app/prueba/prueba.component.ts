@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, ViewChild, ElementRef} from '@angular/core';
 
 export interface Tile {
   color: string;
@@ -16,8 +16,11 @@ export interface Tile {
   styleUrls: ['prueba.component.css'],
 })
 export class PruebaComponent {
-  tiles: Tile[] = [
-  ];
+  tiles: Tile[] = [];
+//silvia
+  isActive = true;
+  save(e) {
+      console.log('Le diste click al boton 2');
+    }
+
 }
-
-
