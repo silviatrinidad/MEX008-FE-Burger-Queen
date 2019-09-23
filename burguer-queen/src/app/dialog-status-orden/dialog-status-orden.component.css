@@ -1,0 +1,29 @@
+.container-table{
+    padding: 0px;
+    margin: 0px;
+    height: 300px;
+    width: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: space-around;
+}
+.table {
+    padding: 0px;
+    margin: 5px;
+    height: 100px;
+    width: 150px;
+    border-radius: 20px;
+    background: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+p{
+    padding: 0px;
+    margin: 0px;
+}
