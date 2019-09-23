@@ -22,6 +22,9 @@ import { MenuComponent } from './menu/menu.component';
 import { Component, OnInit } from '@angular/core';
 // import { Prueba2Component } from './prueba2/prueba2.component'
 
+//Yael
+import { MatDialogModule } from '@angular/material';
+//
 
 
 @NgModule({
@@ -45,6 +48,7 @@ import { Component, OnInit } from '@angular/core';
     MatSidenavModule,
     BrowserAnimationsModule,
     MatListModule,
+    MatDialogModule
     
   ],
   providers: [],
