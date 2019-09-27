@@ -1,54 +1,51 @@
 <div class="container" fxLayout="row" fxLayoutAlign="start">
 <div class="example-sidenav-content" fxLayout="column" fxLayoutAlign="center center">
-    <div fxLayout="row" fxLayoutAlign="center" class="image">
-        <img src="./assets/logo.png" alt="">
+    <div fxLayout="column" fxLayoutAlign="center center" class="image">
+        <img src="./assets/logo.png" alt="" >
     </div>
 
     <div class="buttons-list">
-    <ol class="buttons-list2">
-    <button type="button" mat-button (click)="drawer.toggle()">
+    <ol class="buttons-list2" fxLayout="column" fxLayoutAlign="center center">
+    <button type="button" mat-button (click)="drawer.toggle()" class="button-mat">
     Hamburguesas
     </button>
-    <button type="button" mat-button (click)="drawer2.toggle()">
+    <button type="button" mat-button (click)="drawer2.toggle()" class="button-mat">
         Pizza
     </button>
-    <button type="button" mat-button (click)="drawer.toggle()">
+    <button type="button" mat-button (click)="drawer.toggle()" class="button-mat">
         Ensalada
     </button>
-    <button type="button" mat-button (click)="drawer.toggle()">
+    <button type="button" mat-button (click)="drawer.toggle()" class="button-mat">
         Bebida
     </button>
-    <button type="button" mat-button (click)="drawer.toggle()">
+    <button type="button" mat-button (click)="drawer.toggle()" class="button-mat">
         Paquetes
     </button>
     </ol>
     </div>
 </div>
     
-<div class="container2" fxLayout="column" fxLayoutAlign="center center">
-<mat-drawer-container class="example-container" autosize fxLayout="column" fxLayoutAlign="center center">
-    <mat-drawer #drawer class="example-sidenav" mode="side" fxLayout="row" fxLayoutAlign="center center">
-        <div fxLayout="column" fxLayoutAlign="center center" class="list-hamburguer">
-        <div fxLayout="row" fxLayoutAlign="space-around center">
+<div class="container2" fxLayout="column" fxLayoutAlign="center start">
+<mat-drawer-container class="example-container" autosize fxLayout="column" fxLayoutAlign="start center">
+    <mat-drawer #drawer class="example-sidenav" mode="side" fxLayout="row" fxLayoutAlign="start center">
+        <div class="container-hamburguers">
+        <div fxLayout="row" fxLayoutAlign="space-evenly start" class="list-hamburguer">
             <button (click)="showFiller = !showFiller" mat-raised-button class="button-menu">
                 Soberbia
             </button>
-            <button (click)="showFiller = !showFiller" mat-raised-button class="button-menu">
+            <button (click)="showFiller = !showFiller" mat-raised-button class="button-menu" routerLinkActive="active"   routerLink="/orders">
                 Malicia
             </button>
         </div>
-
-        <br>
-        <div fxLayout="row" fxLayoutAlign="space-around center">
+        <div fxLayout="row" fxLayoutAlign="space-evenly end" class="list-hamburguer">
         <button (click)="showFiller = !showFiller" mat-raised-button class="button-menu">
             Gula
         </button>
-        <br>
         <button (click)="showFiller = !showFiller" mat-raised-button class="button-menu">
             Encarnación
         </button>
         </div>
-        </div>
+    </div>
     </mat-drawer>
 
     <mat-drawer #drawer2 class="example-sidenav" mode="side">

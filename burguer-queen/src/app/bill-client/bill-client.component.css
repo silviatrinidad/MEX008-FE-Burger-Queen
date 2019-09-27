@@ -1,0 +1,59 @@
+    .container-bill {
+    width: 40%; 
+
+    /* border: solid 2px greenyellow; */
+    }
+    /*Mesa o barra*/
+    #place{
+    background: #101010 0% 0% no-repeat padding-box;
+    border-radius: 8px;
+    opacity: 1;
+    color:white;
+
+    }
+    /* .tile{
+        border: solid 2px red;
+    } */
+    .options{
+      width: 100%;
+      font: Bold 19px/23px Barlow Semi Condensed;
+      letter-spacing: 0;
+      color: #FFFFFF;
+      opacity: 1;
+      
+    }
+    
+    
+    .radio-group {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        background: #C9C9C9 0% 0% no-repeat padding-box;
+        border-radius: 14px;
+        opacity: 1;
+        text-align: left;
+        font: 18px/22px Barlow Semi Condensed;
+        letter-spacing: 0;
+        color: #000000;
+
+      }
+      
+      .radio-button {
+        padding: 0.6vh;
+      }
+      
+      button{
+        /* width: 141px;
+        height: 83px; */
+        height: 10vh;
+        width: 10vw;
+        background: #C9C9C9 0% 0% no-repeat padding-box;
+        border-radius: 9px;
+        opacity: 1;
+        text-align: center;
+        font: Bold 19px/23px Barlow Semi Condensed;
+        letter-spacing: 0;
+        color: #000000;
+        opacity: 1;
+        padding: 20px;
+      }

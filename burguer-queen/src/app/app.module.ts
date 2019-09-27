@@ -16,20 +16,29 @@ import {MatListModule} from '@angular/material/list';
 // Componentes que contienen la pagina de las mesas-barras y la comanda respectivamente
 import { InitContainerComponent } from './init-container/init-container.component';
 import { TakeOrderComponent } from './take-order/take-order.component';
+import { BillComponent } from './bill/bill.component';
+import { BillClientComponent } from './bill-client/bill-client.component';
 import { MenuComponent} from './menu/menu.component';
-import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
+// import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
 import {MatMenuModule} from '@angular/material/menu';
 import { FormsModule } from '@angular/forms';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
-import { BarTotalComponent } from './bar-total/bar-total.component';
+// import { BarTotalComponent } from './bar-total/bar-total.component';
 import {MatCardModule} from '@angular/material/card';
+import {MatRadioModule} from '@angular/material/radio';
+import {MatGridListModule} from '@angular/material/grid-list';
+// import { OrderListComponent } from './order-list/order-list.component';
+import { OrdersComponent } from './orders/orders.component';
+import { ModalDialogBillComponent } from './modal-dialog-bill/modal-dialog-bill.component';
 
-import { environment } from 'src/environments/environment';
-import { AngularFireModule } from '@angular/fire';
-import { AngularFirestoreModule } from '@angular/fire/firestore';
-import {ProductsService} from "./services/products.service";
-
+// Yael
+import { StateOrdenComponent } from './state-orden/state-orden.component';
+import { MatDialogModule, MatBadgeModule } from '@angular/material';
+import { DialogStatusOrdenComponent } from './dialog-status-orden/dialog-status-orden.component';
+import { OrdenPayComponent } from './orden-pay/orden-pay.component';
+import {BarTotalComponent} from './bar-total/bar-total.component';
+//
 
 
 @NgModule({
@@ -41,11 +50,21 @@ import {ProductsService} from "./services/products.service";
     LateralBarComponent,
     InitContainerComponent,
     TakeOrderComponent,
+    BillComponent,
+    BillClientComponent,
     BarTotalComponent,
     MenuComponent,
-
-
+    ModalDialogBillComponent,
+    StateOrdenComponent,
+    DialogStatusOrdenComponent,
+    OrdenPayComponent,
+    OrdersComponent
   ],
+  // Yael
+  entryComponents: [DialogStatusOrdenComponent, ModalDialogBillComponent],
+
+
+
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -59,16 +78,15 @@ import {ProductsService} from "./services/products.service";
     MatToolbarModule,
     MatIconModule,
     MatCardModule,
-    AngularFireModule.initializeApp(environment.firebaseConfig),
-    AngularFirestoreModule
-
+    MatRadioModule,
+    MatDialogModule,
+    MatGridListModule,
+    // Yael
+    MatBadgeModule
   ],
-
   providers: [
-    ProductsService
+
   ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
-
-
