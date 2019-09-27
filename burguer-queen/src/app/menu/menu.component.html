@@ -1,30 +1,70 @@
-<mat-drawer-container class="container" fxLayout = "column"  fxLayoutAlign = "space-around start">
-    <mat-drawer mode="side" opened class="drawer-content" fxLayout = "column"  fxLayoutAlign = "space-around start">
-
-
-        <div>
+<div class="container" fxLayout="row" fxLayoutAlign="start">
+<div class="example-sidenav-content" fxLayout="column" fxLayoutAlign="center center">
+    <div fxLayout="row" fxLayoutAlign="center" class="image">
         <img src="./assets/logo.png" alt="">
-        </div>
-        <br>
-        <br>
-        <br>
-        <br>
-        <!-- Lista de enlaces de la sidenav -->
-        <div class="menu" fxLayout = "column"  fxLayoutAlign = "space-around start">
-          <ul fxLayout = "column"  fxLayoutAlign = "center space-between">
-            <li><a href="">Hamburguesa</a></li>
-            <br>
-            <li><a href="">Pizza</a></li>
-            <br>
-            <li><a href="">Ensalada</a></li>
-            <br>
-            <li><a href="">Bebidas</a></li>
-            <br>
-            <li><a href="">Paquetes</a></li>
-          </ul>
+    </div>
+
+    <div class="buttons-list">
+    <ol class="buttons-list2">
+    <button type="button" mat-button (click)="drawer.toggle()">
+    Hamburguesas
+    </button>
+    <button type="button" mat-button (click)="drawer2.toggle()">
+        Pizza
+    </button>
+    <button type="button" mat-button (click)="drawer.toggle()">
+        Ensalada
+    </button>
+    <button type="button" mat-button (click)="drawer.toggle()">
+        Bebida
+    </button>
+    <button type="button" mat-button (click)="drawer.toggle()">
+        Paquetes
+    </button>
+    </ol>
+    </div>
+</div>
+    
+<div class="container2" fxLayout="column" fxLayoutAlign="center center">
+<mat-drawer-container class="example-container" autosize fxLayout="column" fxLayoutAlign="center center">
+    <mat-drawer #drawer class="example-sidenav" mode="side" fxLayout="row" fxLayoutAlign="center center">
+        <div fxLayout="column" fxLayoutAlign="center center" class="list-hamburguer">
+        <div fxLayout="row" fxLayoutAlign="space-around center">
+            <button (click)="showFiller = !showFiller" mat-raised-button class="button-menu">
+                Soberbia
+            </button>
+            <button (click)="showFiller = !showFiller" mat-raised-button class="button-menu">
+                Malicia
+            </button>
         </div>
 
+        <br>
+        <div fxLayout="row" fxLayoutAlign="space-around center">
+        <button (click)="showFiller = !showFiller" mat-raised-button class="button-menu">
+            Gula
+        </button>
+        <br>
+        <button (click)="showFiller = !showFiller" mat-raised-button class="button-menu">
+            Encarnación
+        </button>
+        </div>
+        </div>
     </mat-drawer>
-    <mat-drawer-content class="main-content">Main content</mat-drawer-content>
 
+    <mat-drawer #drawer2 class="example-sidenav" mode="side">
+    <button (click)="showFiller = !showFiller" mat-raised-button class="button-menu">
+            Gula
+    </button>
+    </mat-drawer>
 </mat-drawer-container>
+</div>
+<ng-content></ng-content>
+</div>
+      
+
+
+
+
+
+
+

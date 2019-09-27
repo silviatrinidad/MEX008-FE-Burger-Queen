@@ -1,56 +1,76 @@
 *{
     font-family: Barlow Semi Condensed, Bold Italic;
+    background: #F0F0F0;
+    font-size: 16px;
 }
 
-.container {
-    width: 50vw;
+.container{
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+.example-container {
+    margin:0;
+    padding: 0px;
+    width: 25vw;
+    height: 40vh;
+    
+  }
+  
+  .example-sidenav-content {
+    width: 13vw;
     height: 100vh;
     margin: 0;
     padding: 0;
-    border: 1px solid red;
-}
-
-.drawer-content{
-    width: 20%;
-    border: 2px solid black;
-    border-radius: 0 40px 40px 0;
-    background: white;
-}
-
-.main-content{
-    background: blue;
-}
-
-/* .container .drawer-content{
-background: yellow;
-} */
-
-.container .drawer-content .menu ul li{
-    text-decoration: none;
-    list-style: none;
-    background: white;
-    color: black;
-
-}
-
-.container .drawer-content .menu ul {
-    margin: 0;
+    border:2px solid white;
+    border-radius: 0 70px 70px 0;
+    background: #F7F7F7;
+  }
+  
+  .example-sidenav {
     padding: 0;
+    margin: 0;
+    /* border: 1px white solid; */
+    background: #F7F7F7;
+    width: 30vw;
+    height: 40vh;
+  }
+
+.container2{
+    margin:0;
+    padding: 0px;
+    width: 62vw;
+    height: 100vh;
 }
 
-.container .drawer-content .menu ul li a{
-    margin: 10px;
-    color: black;
-    font-size: 20px;
-    list-style: none;
-    font-size: 25px;
+.button-menu{
+    font-size: 15px;
+    border: 1px solid black;
+    margin: 0;
+    padding: 7px;
+    background: white;
+    border-radius: 5px;
 }
 
-.container .drawer-content .menu ul li a:hover{
+.image{
+    width: 10vw;
+    background: #F7F7F7;
+}
+
+.buttons-list ol button:hover{
     background: #FFE867;
-    widows: 100%;
-    border-radius: 10px;
-    text-decoration: none;
-    
+    border-radius: 30px;
 }
 
+.list-hamburguer{
+    padding: 0;
+    margin: 0;
+    width: 30vw;
+    height: 40vh;
+}
+
+.buttons-list2{
+    background: #F7F7F7;
+}

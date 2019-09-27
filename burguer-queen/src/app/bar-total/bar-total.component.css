@@ -8,4 +8,31 @@
   font-size: 34px;
   padding: 0;
   margin: 0;
+  display: grid;
+  grid-template-areas: "numTable"
+                        "order"
+                        "total"
+                        "sent"  ;
+  grid-template-rows: auto ;
+  grid-template-columns: auto;
+}
+
+.numTable{
+  grid-area: numTable;
+  background: red;
+}
+
+.order{
+  grid-area: order;
+  background: #FFE867;
+}
+
+.total{
+  grid-area: total;
+  background: aqua;
+}
+
+.sent{
+  grid-area: sent;
+  background: blueviolet;
 }
