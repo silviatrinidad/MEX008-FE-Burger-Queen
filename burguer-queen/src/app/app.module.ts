@@ -9,7 +9,6 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {PruebaComponent} from './prueba/prueba.component';
 // Modulo de FlexLayout
 import {FlexLayoutModule} from '@angular/flex-layout';
-import {MatButtonModule} from '@angular/material/button';
 import {LateralBarComponent} from './lateral-bar/lateral-bar.component';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list';
@@ -37,6 +36,10 @@ import { StateOrdenComponent } from './state-orden/state-orden.component'
 import { MatDialogModule, MatBadgeModule } from '@angular/material';
 import { DialogStatusOrdenComponent } from './dialog-status-orden/dialog-status-orden.component';
 import { OrdenPayComponent } from './orden-pay/orden-pay.component';
+import { HomeComponent } from './home/home.component';
+import { FormComponent } from './form/form.component';
+import {MatButtonModule, MatFormFieldModule, MatInputModule, MatRippleModule} from '@angular/material';
+// import { FormGroup, FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
 //
 
 
@@ -57,7 +60,7 @@ import { OrdenPayComponent } from './orden-pay/orden-pay.component';
     StateOrdenComponent,
     DialogStatusOrdenComponent,
     OrdenPayComponent, 
-    OrdersComponent
+    OrdersComponent, HomeComponent, FormComponent
   ],
   //Yael
   entryComponents: [DialogStatusOrdenComponent,ModalDialogBillComponent],
@@ -80,8 +83,10 @@ import { OrdenPayComponent } from './orden-pay/orden-pay.component';
     MatRadioModule,
     MatDialogModule,
     MatGridListModule,
-    //Yael
-    MatBadgeModule    
+    MatFormFieldModule,
+    MatBadgeModule, 
+    MatInputModule,
+    MatRippleModule
   ],
   providers: [
    

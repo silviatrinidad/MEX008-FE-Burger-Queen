@@ -1,67 +1,83 @@
 <div class="container" fxLayout="row" fxLayoutAlign="start">
-<div class="example-sidenav-content" fxLayout="column" fxLayoutAlign="center center">
+  <div class="example-sidenav-content" fxLayout="column" fxLayoutAlign="center center">
     <div fxLayout="column" fxLayoutAlign="center center" class="image">
-        <img src="./assets/logo.png" alt="" >
+      <img src="./assets/logo.png" alt="">
     </div>
 
     <div class="buttons-list">
-    <ol class="buttons-list2" fxLayout="column" fxLayoutAlign="center center">
-    <button type="button" mat-button (click)="drawer.toggle()" class="button-mat">
-    Hamburguesas
-    </button>
-    <button type="button" mat-button (click)="drawer2.toggle()" class="button-mat">
-        Pizza
-    </button>
-    <button type="button" mat-button (click)="drawer.toggle()" class="button-mat">
-        Ensalada
-    </button>
-    <button type="button" mat-button (click)="drawer.toggle()" class="button-mat">
-        Bebida
-    </button>
-    <button type="button" mat-button (click)="drawer.toggle()" class="button-mat">
-        Paquetes
-    </button>
-    </ol>
+      <ol class="buttons-list2" fxLayout="column" fxLayoutAlign="center center">
+        <button type="button" mat-button (click)="drawer.toggle()" class="button-mat">
+          Hamburguesas
+        </button>
+        <button type="button" mat-button (click)="drawer2.toggle()" class="button-mat">
+          Pizza
+        </button>
+        <button type="button" mat-button (click)="drawer.toggle()" class="button-mat">
+          Ensalada
+        </button>
+        <button type="button" mat-button (click)="drawer.toggle()" class="button-mat">
+          Bebida
+        </button>
+        <button type="button" mat-button (click)="drawer.toggle()" class="button-mat">
+          Paquetes
+        </button>
+      </ol>
     </div>
-</div>
-    
-<div class="container2" fxLayout="column" fxLayoutAlign="center start">
-<mat-drawer-container class="example-container" autosize fxLayout="column" fxLayoutAlign="start center">
-    <mat-drawer #drawer class="example-sidenav" mode="side" fxLayout="row" fxLayoutAlign="start center">
+  </div>
+
+  <div class="container2" fxLayout="column" fxLayoutAlign="center start">
+    <mat-drawer-container class="example-container" autosize fxLayout="row" fxLayoutAlign="start center">
+      <mat-drawer #drawer class="example-sidenav" mode="side" fxLayout="column" fxLayoutAlign="start center">
         <div class="container-hamburguers">
-        <div fxLayout="row" fxLayoutAlign="space-evenly start" class="list-hamburguer">
-            <button (click)="showFiller = !showFiller" mat-raised-button class="button-menu">
-                Soberbia
+
+          <div fxLayout="row" fxLayoutAlign="space-evenly start" class="list-hamburguer">
+            <button class="nameProduct" *ngFor="let product of products" (click)="onAddProduct(product)">
+              {{product.name}}
             </button>
-            <button (click)="showFiller = !showFiller" mat-raised-button class="button-menu" routerLinkActive="active"   routerLink="/orders">
-                Malicia
-            </button>
+          </div>
         </div>
-        <div fxLayout="row" fxLayoutAlign="space-evenly end" class="list-hamburguer">
+      </mat-drawer>
+
+      <!-- <mat-drawer #drawer2 class="example-sidenav" mode="side">
         <button (click)="showFiller = !showFiller" mat-raised-button class="button-menu">
-            Gula
+          Gula
         </button>
-        <button (click)="showFiller = !showFiller" mat-raised-button class="button-menu">
-            Encarnación
+      </mat-drawer> -->
+    </mat-drawer-container>
+  </div>
+
+  <!-- Comanda -->
+  <div class="container-order" fxLayout="column" fxLayoutAlign="start start">
+    <div class="container2-order" fxLayout="column" fxLayoutAlign="start center">
+      <div class="main" fxLayout="row" fxLayoutAlign="start start">
+        <p>Mesa 1</p>
+        <button class="mdl-button mdl-button--fab">
+          <mat-icon class="icon">person_add</mat-icon>
         </button>
+      </div>
+      <div class="name-order" fxLayout="column" fxLayoutAlign="start center">
+        <p>Orden #</p>
+        <input type="text" name="" id="input-customer">
+        <br>
+        <div class="section-person" fxLayout="row" fxLayoutAlign="space-around start">
+        <p>Persona 1</p>
+        <p>$</p>
         </div>
+        <div class="orders-person">
+        <ul class="collection" fxLayout="column" fxLayoutAlign="start start">
+          <li *ngFor="let order of tempOrder">
+            <span>{{order}}</span>
+          </li>
+        </ul>
+        </div>  
+        <div class="section-person2" fxLayout="row" fxLayoutAlign="space-around start">
+            <p>Total</p>
+            <p>$</p>
+      </div>
+ <br>
+      <button class="btn-sendOrder">Enviar a cocina</button>
+
     </div>
-    </mat-drawer>
 
-    <mat-drawer #drawer2 class="example-sidenav" mode="side">
-    <button (click)="showFiller = !showFiller" mat-raised-button class="button-menu">
-            Gula
-    </button>
-    </mat-drawer>
-</mat-drawer-container>
+  </div>
 </div>
-<ng-content></ng-content>
-</div>
-      
-
-
-
-
-
-
-

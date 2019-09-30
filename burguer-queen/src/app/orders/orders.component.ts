@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NONE_TYPE } from '@angular/compiler/src/output/output_ast';
 // import { OrdersService } from '../shared/orders.service';
 
 @Component({
@@ -10,43 +11,93 @@ import { Component, OnInit } from '@angular/core';
 
 
 export class OrdersComponent implements OnInit {
-  // constructor(private ordersService: OrdersService) {}
+
+  constructor() {}
+  "products" = [
+    {
+      name: "Soberbia",
+      datalle:{
+      pan:["masa Madre", "tradicional"],
+      type:{
+        combo:65,
+        individual:50
+        },
+      ingredientes:["Con todo", "Sin"],
+      Especificaciones:[]
+      }
+    },
+    
+    {
+      name: "Malicia",
+      detalle:{
+      pan:["masa madre", "tradicional"],
+      type:{
+        combo:65,
+        individual:50
+      },
+      ingredientes:["Con todo", "Sin"],
+      Especificaciones:[]
+    }
+    },
+
+    {
+      name: "Gula",
+      detalle:{
+      pan:["masa madre", "tradicional"],
+      type:{
+        combo:65,
+        individual:50
+      },
+      ingredientes:["Con todo", "Sin"],
+      Especificaciones:[]
+    }
+    },
+
+    {
+      name: "Encarnación",
+      detalle:{
+      pan:["masa madre", "tradicional"],
+      type:{
+        combo:65,
+        individual:50
+      },
+      ingredientes:["Con todo", "Sin"],
+      Especificaciones:[]
+    }
+    }
+
+  ];
+
+
+
+  totalOrder = 0;
+  // Array temporal
+  tempOrder = []; 
+
+
+  ngOnInit(){}
+
+  onAddProduct(product){
+    console.log(product);
+    // suma de todos los precios
+    this.totalOrder = (this.totalOrder + product.price);
+    this.tempOrder.push(product.name)
+  }
+}
+
+
+
+
+
 
   //SILVIA
   //AGREGANDO CONTADOR
-cantidad = 0;
-sumar() {
-  this.cantidad ++;
-}
-restar() {
-  this.cantidad --;
-}
-
-
-  hamburguesas = [
-    'Soberbia',
-    'Malicia',
-    'Gula',
-    'Encarnación'
-  ];
-
-  hamburguesaOrder = [];
-
-  ngOnInit() {}
-
-  addHamburguesa = hamburguesa => this.hamburguesaOrder.push(hamburguesa);
-
-  removeHamburguesa = hamburguesa => {
-    const index = this.hamburguesaOrder.indexOf(hamburguesa);
-    if (index > -1) { this.hamburguesaOrder.splice(index, 1); }
-  }
-
-  onSubmit() {
-    // this.ordersService.form.value.hamburguesaOrder = this.hamburguesaOrder;
-    // const data = this.ordersService.form.value;
-
-    // this.ordersService.createHamburguesaOrder(data).then(res => {
-    }
-    // );
-  }
+// cantidad = 0;
+// sumar() {
+//   this.cantidad ++;
 // }
+// restar() {
+//   this.cantidad --;
+// }
+
+
