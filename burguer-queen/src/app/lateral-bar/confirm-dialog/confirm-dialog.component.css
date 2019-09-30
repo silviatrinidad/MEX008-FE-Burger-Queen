@@ -1,0 +1,68 @@
+
+label {
+  display: block;
+  margin: .5em 0 0 0;
+  text-align: left;
+  font-size: 10px;
+}
+
+.first-content{
+  display: grid;
+  justify-content: center;
+}
+
+.keyboard {
+justify-content: center;
+}
+
+.button-options{
+  display: flex;
+  justify-content: space-around;
+}
+
+
+.password-input {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom-style: groove;
+  text-align: center;
+  font-size: 14px;
+  padding: .5em;
+}
+
+::-webkit-input-placeholder{
+  color: #E2E2E2;
+
+}
+
+.modal-password {
+  width: 300px;
+  height: 348px;
+}
+
+.button-numbers {
+  background: rgba(0,0,0,0.7);
+  width: 100px;
+  height: 40px;
+  border: #c4c4c4 solid 1px;
+  color: black;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.password-button {
+  background: #FFFFFF;
+  box-shadow: 0 3px 6px #00000029;
+  border-radius: 24px;
+  opacity: 1;
+  width: 71px;
+  height: 32px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 12px;
+  padding: 0;
+  justify-content: center;
+  line-height: normal;
+}
+

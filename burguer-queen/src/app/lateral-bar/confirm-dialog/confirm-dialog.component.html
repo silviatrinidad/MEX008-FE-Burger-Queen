@@ -1,0 +1,31 @@
+<div class="modal-password">
+  <div class="elements">
+    <div  mat-dialog-content>
+      {{message}}
+      <div class="first-content">
+        <div>
+          <label for="password">Contraseña</label>
+          <input id="password" class="password-input" type="password" placeholder="Escribe tu contraseña">
+        </div>
+        <br><br>
+        <div class="button-options">
+          <button class="password-button" mat-button (click)="onClickNO">Cancelar</button>
+          <button class="password-button" mat-button [mat-dialog-close]="true">Entrar</button>
+        </div>
+        <br><br>
+      </div>
+
+      <div class="keyboard">
+        <button class="button-numbers">1</button> <button class="button-numbers">2</button> <button class="button-numbers">3</button><br>
+        <button class="button-numbers">4</button> <button class="button-numbers">5</button> <button class="button-numbers">6</button><br>
+        <button class="button-numbers">7</button> <button class="button-numbers">8</button> <button class="button-numbers">9</button><br>
+        <button class="button-numbers">-</button>  <button class="button-numbers">0</button> <button class="button-numbers">X</button>
+      </div>
+    </div>
+  </div>
+
+<!--    <div mat-dialog-actions>-->
+
+<!--    </div>-->
+
+</div>

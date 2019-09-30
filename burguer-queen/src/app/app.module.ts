@@ -38,7 +38,8 @@ import { MatDialogModule, MatBadgeModule } from '@angular/material';
 import { DialogStatusOrdenComponent } from './dialog-status-orden/dialog-status-orden.component';
 import { OrdenPayComponent } from './orden-pay/orden-pay.component';
 import {BarTotalComponent} from './bar-total/bar-total.component';
-//
+import { ConfirmDialogComponent } from './lateral-bar/confirm-dialog/confirm-dialog.component';
+
 
 
 @NgModule({
@@ -58,10 +59,12 @@ import {BarTotalComponent} from './bar-total/bar-total.component';
     StateOrdenComponent,
     DialogStatusOrdenComponent,
     OrdenPayComponent,
-    OrdersComponent
+    OrdersComponent,
+    ConfirmDialogComponent
+
   ],
   // Yael
-  entryComponents: [DialogStatusOrdenComponent, ModalDialogBillComponent],
+  entryComponents: [DialogStatusOrdenComponent, ModalDialogBillComponent, ConfirmDialogComponent],
 
 
 
