@@ -1,5 +1,5 @@
 *{
-  font-family: Barlow Semi Condensed, Bold Italic;
+  font-family: Barlow Semi Condensed, Bold Italic, serif;
 }
 
 .example-sidenav {
@@ -14,8 +14,8 @@
     width: 100vw;
     height: 80vh;
     background: #F0F0F0;
-    color: black; 
-  } 
+    color: black;
+  }
 
 .btn-lat-bar{
     background: red;
@@ -61,7 +61,7 @@
 
   .mat-drawer-container div .administrator {
     font-size: 20px;
-    font-weight: 2000px;
+    /*font-weight: 2000px;*/
   }
 
 
@@ -104,6 +104,3 @@ div .rectangule{
   font-size: 20px;
   font-weight: bold;
 }
-
-
-

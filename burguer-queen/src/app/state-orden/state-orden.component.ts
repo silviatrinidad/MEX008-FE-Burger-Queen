@@ -16,7 +16,7 @@ export interface Tile {
 })
 export class StateOrdenComponent {
   // tiles: Tile[] = [
-  //   {color: '', cols: 3, rows: 1, text: ''} 
+  //   {color: '', cols: 3, rows: 1, text: ''}
   // ];
   constructor (public dialog: MatDialog) {}
   openDialog(){

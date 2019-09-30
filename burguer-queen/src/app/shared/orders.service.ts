@@ -80,4 +80,4 @@ export class OrdersService {
 //       .doc(data.payload.doc.id)
 //       .delete();
 //   }
-}
+

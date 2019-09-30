@@ -13,11 +13,23 @@
   font-size: 34px;
   padding: 10px;
   margin: 0;
+  display: grid;
+  grid-template-areas: "numTable"
+                        "order"
+                        "total"
+                        "sent"  ;
+  grid-template-rows: auto ;
+  grid-template-columns: auto;
 }
 
-.container2{
-  margin: 0;
-  padding: 0;
+.numTable{
+  grid-area: numTable;
+  background: red;
+}
+
+.order{
+  grid-area: order;
+  background: #FFE867;
 }
 
 .main p{
@@ -83,3 +95,4 @@
   width: 20vw;
   height: 4vh;
 } */
+
