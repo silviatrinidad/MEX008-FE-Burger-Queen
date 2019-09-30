@@ -3,3 +3,16 @@
 /* *{
     background: #F0F0F0;
 } */
+
+.mat-dialog-container {
+  padding: 24px 0 0 0 !important;
+  overflow: hidden !important;
+}
+
+input:focus, input.form-control:focus {
+
+  outline: none 0 !important;
+  box-shadow: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+}

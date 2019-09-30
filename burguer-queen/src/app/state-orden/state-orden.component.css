@@ -1,0 +1,22 @@
+/* .container-button{
+    padding: 2px;
+    margin:0;
+    display: flex;    
+} */
+
+.btn-state-orden{
+    padding: 2px;
+    margin:0;
+    height: 100px;
+    width: 120px;
+    font-size: 1.2rem;
+    white-space: pre-wrap;
+    text-align: center;
+    font-weight: bold;
+    display: flex;
+    /* float:top; */
+    z-index: 1;
+    align-self: flex-end;
+    align-content: space-around;    
+    background: yellow;
+}

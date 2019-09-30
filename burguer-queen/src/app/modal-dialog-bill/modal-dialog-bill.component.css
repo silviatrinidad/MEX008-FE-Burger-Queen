@@ -1,0 +1,71 @@
+/* *{
+    padding: 0;
+    margin: 0;
+} */
+ul {
+    list-style:none ;
+    font: 17px/20px Barlow Semi Condensed;
+    letter-spacing: 0;
+    color: #000000;
+    opacity: 1;
+}
+
+/* .mat-dialog-container{
+padding: 0;
+border-radius: 10px;
+background: #FFFFFF 0% 0% no-repeat padding-box;
+opacity: 1;
+width: 375px;
+height: 538px;
+} */
+h1{
+font: Bolder 28px/34px Barlow Semi Condensed;
+letter-spacing: 0;
+color: #020202;
+opacity: 1;
+text-align: center;
+}
+.mat-dialog-content{
+    width: 375px;
+    height: 470px;
+    padding: 0; 
+}
+.mat-grid-list{
+ background-color:rgba(29, 29, 29, 0.69);  
+ color: rgba(0, 0, 0, 1);
+}
+.mat-grid-tile{
+    border: 1px solid rgba(255, 255, 255, 0.7)
+}
+.btn-cancel{
+    width: 100px;
+    height: 33px;
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 24px;
+    opacity: 1;
+    margin: 16px;
+    font: Italic Bolder 14px/17px Barlow Semi Condensed ; 
+    letter-spacing: 0;
+    color: #000000;
+    opacity: 1;
+
+}
+
+.btn-pay{
+width: 100px;
+height: 33px;
+background: #FFE867 0% 0% no-repeat padding-box;
+box-shadow: 0px 3px 6px #00000029;
+border-radius: 24px;
+opacity: 1;
+margin: 16px;
+font: Italic Bolder 15px/18px Barlow Semi Condensed ;
+letter-spacing: 0;
+color: #000000;
+opacity: 1;
+}
+
+.gray{
+    background: rgba(255, 255, 255, 0.7);
+    opacity: 1;
+}

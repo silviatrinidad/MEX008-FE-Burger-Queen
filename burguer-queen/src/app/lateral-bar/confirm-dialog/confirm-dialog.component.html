@@ -1,0 +1,32 @@
+<div class="modal-password">
+  <div class="elements">
+    <div  mat-dialog-content>
+      {{message}}
+      <div class="first-content">
+        <div>
+          <label for="float-pass">Contraseña</label>
+          <input id="float-pass" [(ngModel)]="password"  pInputText class="form-control" type="password" placeholder="Escribe tu contraseña">
+          <input type="hidden" id="float-input" [(ngModel)]="email" value="viridiana.avem@gmail.com" >
+        </div>
+        <br><br>
+        <div class="button-options">
+          <button class="password-button" mat-button [mat-dialog-close]="true">Cancelar</button>
+          <button type="button" class="password-button" (click)="login()" mat-button >Entrar</button>
+        </div>
+        <br><br>
+      </div>
+
+      <div class="keyboard">
+        <button class="button-numbers">1</button> <button class="button-numbers">2</button> <button class="button-numbers">3</button><br>
+        <button class="button-numbers">4</button> <button class="button-numbers">5</button> <button class="button-numbers">6</button><br>
+        <button class="button-numbers">7</button> <button class="button-numbers">8</button> <button class="button-numbers">9</button><br>
+        <button class="button-numbers">-</button>  <button class="button-numbers">0</button> <button class="button-numbers">X</button>
+      </div>
+    </div>
+  </div>
+
+<!--    <div mat-dialog-actions>-->
+
+<!--    </div>-->
+
+</div>

@@ -1,19 +1,29 @@
 .app-header{
     background: #FFE867;
-    margin: 2px;
+    margin:0;
+    padding: 0;
     font-family: Barlow Semi Condensed, Bold Italic;
     border-radius: 33px;
-    height: 50px;
+    height: 6vh;
     text-align: center;
-    width: 200px;
+    width: 15vw;
     font-weight: bold;
 }
 
 .header{
-    width: 100%;
+    width: 80vw;
+    height: 15vh;
+    margin: 0;
+    padding: 0;
 }
 
 .container-header{
-    width: 95vw;
+    margin: 0;
+    padding: 0;
+    /* width: 100vw;
+    height: 2vh; */
 }
+
+
+
 
