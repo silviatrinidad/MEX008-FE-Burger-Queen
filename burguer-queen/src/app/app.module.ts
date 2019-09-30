@@ -9,7 +9,6 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {PruebaComponent} from './prueba/prueba.component';
 // Modulo de FlexLayout
 import {FlexLayoutModule} from '@angular/flex-layout';
-import {MatButtonModule} from '@angular/material/button';
 import {LateralBarComponent} from './lateral-bar/lateral-bar.component';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list';
@@ -46,6 +45,11 @@ import {AngularFireAuth, AngularFireAuthModule} from '@angular/fire/auth';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { environment } from '../environments/environment';
 import { UserService } from './user.service';
+import { HomeComponent } from './home/home.component';
+import { FormComponent } from './form/form.component';
+import {MatButtonModule, MatFormFieldModule, MatInputModule, MatRippleModule} from '@angular/material';
+// import { FormGroup, FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
+//
 
 
 @NgModule({
@@ -64,6 +68,7 @@ import { UserService } from './user.service';
     ModalDialogBillComponent,
     StateOrdenComponent,
     DialogStatusOrdenComponent,
+
     OrdenPayComponent,
     OrdersComponent,
     ConfirmDialogComponent
@@ -90,12 +95,17 @@ import { UserService } from './user.service';
     MatRadioModule,
     MatDialogModule,
     MatGridListModule,
+
     // Yael
     MatBadgeModule,
     // Firebase
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAuthModule,
     AngularFirestoreModule
+    MatFormFieldModule,
+    MatBadgeModule, 
+    MatInputModule,
+    MatRippleModule
   ],
   providers: [
     UserService
