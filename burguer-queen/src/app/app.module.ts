@@ -40,6 +40,12 @@ import { OrdenPayComponent } from './orden-pay/orden-pay.component';
 import {BarTotalComponent} from './bar-total/bar-total.component';
 import { ConfirmDialogComponent } from './lateral-bar/confirm-dialog/confirm-dialog.component';
 
+// Firebase
+import { AngularFireModule } from '@angular/fire';
+import {AngularFireAuth, AngularFireAuthModule} from '@angular/fire/auth';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { environment } from '../environments/environment';
+import { UserService } from './user.service';
 
 
 @NgModule({
@@ -85,9 +91,14 @@ import { ConfirmDialogComponent } from './lateral-bar/confirm-dialog/confirm-dia
     MatDialogModule,
     MatGridListModule,
     // Yael
-    MatBadgeModule
+    MatBadgeModule,
+    // Firebase
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireAuthModule,
+    AngularFirestoreModule
   ],
   providers: [
+    UserService
 
   ],
   bootstrap: [AppComponent]

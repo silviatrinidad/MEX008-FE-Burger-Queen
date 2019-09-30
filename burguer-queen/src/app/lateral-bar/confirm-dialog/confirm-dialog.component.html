@@ -4,13 +4,14 @@
       {{message}}
       <div class="first-content">
         <div>
-          <label for="password">Contraseña</label>
-          <input id="password" class="password-input" type="password" placeholder="Escribe tu contraseña">
+          <label for="float-pass">Contraseña</label>
+          <input id="float-pass" [(ngModel)]="password"  pInputText class="form-control" type="password" placeholder="Escribe tu contraseña">
+          <input type="hidden" id="float-input" [(ngModel)]="email" value="viridiana.avem@gmail.com" >
         </div>
         <br><br>
         <div class="button-options">
-          <button class="password-button" mat-button (click)="onClickNO">Cancelar</button>
-          <button class="password-button" mat-button [mat-dialog-close]="true">Entrar</button>
+          <button class="password-button" mat-button [mat-dialog-close]="true">Cancelar</button>
+          <button type="button" class="password-button" (click)="login()" mat-button >Entrar</button>
         </div>
         <br><br>
       </div>
