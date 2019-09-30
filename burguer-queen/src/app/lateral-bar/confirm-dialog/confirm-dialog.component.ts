@@ -1,6 +1,7 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import {UserService} from '../../user.service';
+import {concatAll} from "rxjs/operators";
 
 
 
@@ -44,6 +45,13 @@ export class ConfirmDialogComponent implements OnInit {
       });
     this.email = '';
     this.password = '';
+  }
+  add(s) {
+    if (this.password === undefined) {
+      this.password = '' + s.toString();
+    } else {
+      this.password = this.password + s.toString();
+    }
   }
 
 }
