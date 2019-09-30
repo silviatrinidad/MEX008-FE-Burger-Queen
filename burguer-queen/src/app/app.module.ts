@@ -51,7 +51,6 @@ import {MatButtonModule, MatFormFieldModule, MatInputModule, MatRippleModule} fr
 // import { FormGroup, FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
 //
 
-
 @NgModule({
   exports: [],
   declarations: [
@@ -101,9 +100,7 @@ import {MatButtonModule, MatFormFieldModule, MatInputModule, MatRippleModule} fr
     // Firebase
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAuthModule,
-    AngularFirestoreModule
-    MatFormFieldModule,
-    MatBadgeModule, 
+    AngularFirestoreModule,
     MatInputModule,
     MatRippleModule
   ],
