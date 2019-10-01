@@ -32,8 +32,10 @@ import { OrdersComponent } from './orders/orders.component';
 import { ModalDialogBillComponent } from './modal-dialog-bill/modal-dialog-bill.component';
 
 // Yael
-import { StateOrdenComponent } from './state-orden/state-orden.component';
 import { MatDialogModule, MatBadgeModule } from '@angular/material';
+import { DragDropModule } from '@angular/cdk/drag-drop'
+
+import { StateOrdenComponent } from './state-orden/state-orden.component';
 import { DialogStatusOrdenComponent } from './dialog-status-orden/dialog-status-orden.component';
 import { OrdenPayComponent } from './orden-pay/orden-pay.component';
 import {BarTotalComponent} from './bar-total/bar-total.component';
@@ -99,6 +101,8 @@ import { TimerComponent } from './timer/timer.component';
 
     // Yael
     MatBadgeModule,
+    DragDropModule,
+    
     // Firebase
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAuthModule,
