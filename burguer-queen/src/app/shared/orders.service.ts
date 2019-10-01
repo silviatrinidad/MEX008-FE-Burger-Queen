@@ -24,7 +24,7 @@ export class OrdersService {
       ));
   }
 
-  form = new FormGroup({
+  myForm = new FormGroup({
     customerName: new FormControl(''),
     orderNumber: new FormControl(''),
     order: new FormControl(''),
@@ -48,7 +48,7 @@ export class OrdersService {
       return this.ordersCollection.add(order);
   }
 
-
+}
 
 
 

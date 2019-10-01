@@ -1,3 +1,5 @@
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
 <div class="container" fxLayout="row" fxLayoutAlign="start">
   <div class="example-sidenav-content" fxLayout="column" fxLayoutAlign="center center">
     <div fxLayout="column" fxLayoutAlign="center center" class="image">
@@ -31,7 +33,7 @@
         <div class="container-hamburguers">
 
           <div fxLayout="row" fxLayoutAlign="space-evenly start" class="list-hamburguer">
-            <button class="nameProduct" *ngFor="let product of products" (click)="onAddProduct(product)" routerLinkActive="active"   routerLink="/orders">
+            <button class="nameProduct" *ngFor="let product of products" (click)="onAddProduct(product)">
               {{product.name}}
             </button>
           </div>
@@ -66,7 +68,11 @@
         <div class="orders-person">
         <ul class="collection" fxLayout="column" fxLayoutAlign="start start">
           <li *ngFor="let order of tempOrder">
+              <a (click)="removeItemOrder(order)">
+                  <mat-icon class="clear">clear</mat-icon>
+                </a>
             <span>{{order}}</span>
+
           </li>
         </ul>
         </div>  
@@ -81,3 +87,85 @@
 
   </div>
 </div>
+
+
+<!-- Especificaciones de producto -->
+
+
+    <!-- <div fxLayout="column" fxLayoutAlign="start center"> -->
+      <fieldset>
+        <label>
+          <input type="radio" name="size" value="50">Individual ($50)
+        </label>
+        <label>
+          <input type="radio" name="combo" value="65">
+        </label> En combo ($65)
+      </fieldset>
+    <!-- </div> -->
+
+    <!-- <div fxLayout="column" fxLayoutAlign="start center"> -->
+      <fieldset>
+        <legend>Pan:</legend>
+        <label>
+          <input type="radio" name="pan" value="pan">
+        </label>Masa madre
+        <label>
+          <input type="radio" name="ingredients" value="ingredients">
+        </label> Tradicional
+      </fieldset>
+    <!-- </div> -->
+
+    <!-- <div fxLayout="column" fxLayoutAlign="start center"> -->
+      <fieldset>
+        <legend>Ingredientes:</legend>
+        <label>
+          <input type="radio" name="pan" value="pan">
+        </label>Masa madre
+        <label>
+          <input type="radio" name="ingredients" value="ingredients">
+        </label> Tradicional
+      </fieldset>
+      <p>Especificaciones: <input class="especifics" type="text"></p>
+    <!-- </div> -->
+
+
+    <!-- <div class="content-btn" fxLayout="row" fxLayoutAlign="center center"> -->
+      <button class="save-btn" (click)="onSubmit()">
+        Guardar
+      </button>
+      <button class="cancel-btn">
+        Cancelar
+      </button>
+
+    <!-- </div> -->
+ 
+<!-- </div> -->
+<!-- </div> -->
+
+
+<!-- <div> -->
+<form [formGroup]="this.orderService.myForm" (ngSubmit)="onSubmit()">
+<table>
+  <tr>
+    <td>
+      <mat-form-field>
+        <input matInput #orderNumber maxlength="3" placeholder="Order Numbrer">
+      </mat-form-field>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <mat-form-field>
+        <input matInput #orderNumber maxlength="13" placeholder="Customer">
+      </mat-form-field>
+    </td>
+  </tr>
+  <tr>
+    <td>
+        <button class="btn-send">Enviar</button>
+    </td>
+  </tr>
+</table>
+
+</form>
+<!-- </div> -->
