@@ -48,6 +48,9 @@ import { UserService } from './user.service';
 import {MatButtonModule, MatFormFieldModule, MatInputModule, MatRippleModule} from '@angular/material';
 // import { MenuModalComponent } from './menu/menu-modal/menu-modal.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { TimerComponent } from './timer/timer.component';
+// import { FormGroup, FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
+//
 
 @NgModule({
   exports: [],
@@ -70,6 +73,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     // OrdersComponent,
     ConfirmDialogComponent,
     // MenuModalComponent
+    ConfirmDialogComponent,
+    TimerComponent,
 
   ],
   // Yael
