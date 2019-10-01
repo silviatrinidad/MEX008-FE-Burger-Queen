@@ -48,6 +48,7 @@ import { UserService } from './user.service';
 import { HomeComponent } from './home/home.component';
 import { FormComponent } from './form/form.component';
 import {MatButtonModule, MatFormFieldModule, MatInputModule, MatRippleModule} from '@angular/material';
+import { TimerComponent } from './timer/timer.component';
 // import { FormGroup, FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
 //
 
@@ -67,16 +68,12 @@ import {MatButtonModule, MatFormFieldModule, MatInputModule, MatRippleModule} fr
     ModalDialogBillComponent,
     StateOrdenComponent,
     DialogStatusOrdenComponent,
-<<<<<<< HEAD
-    OrdenPayComponent, 
-    OrdersComponent  
-=======
 
     OrdenPayComponent,
     OrdersComponent,
-    ConfirmDialogComponent
+    ConfirmDialogComponent,
+    TimerComponent
 
->>>>>>> e9e287fdca985e1a4fd9a20dbbb518b82d76663d
   ],
   // Yael
   entryComponents: [DialogStatusOrdenComponent, ModalDialogBillComponent, ConfirmDialogComponent],

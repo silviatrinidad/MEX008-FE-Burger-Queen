@@ -46,7 +46,7 @@ export class ConfirmDialogComponent implements OnInit {
     this.password = '';
   }
 add(s) {
-if(this.password === undefind ) {
+if(this.password === undefined ) {
 this.password ='' + s.toString();
 } else
 {
