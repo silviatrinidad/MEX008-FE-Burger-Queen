@@ -107,7 +107,7 @@ import { TimerComponent } from './timer/timer.component';
     DragDropModule,
     
     // Firebase
-    // AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAuthModule,
     AngularFirestoreModule,
     MatInputModule,
