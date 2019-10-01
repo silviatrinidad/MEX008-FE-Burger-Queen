@@ -25,11 +25,11 @@
   <!-- Efecto de deslizamiento sidenav -->
   <div class="example-sidenav-content" fxLayout = "row"  fxLayoutAlign = " center start">
     <div class="button-administrator" fxLayout = "row"  fxLayoutAlign = "start center">
-<!--    <button class = "nav" type="button"  (click)="drawer.toggle()" fxLayout = "row"  fxLayoutAlign = "center start">-->
-<!--      ADMINISTRADOR-->
+<!--    <button class = "nav" type="button"  (click)="drawer.toggle()" fxLayout = "row"  fxLayoutAlign = "center end">-->
+<!--      holi-->
 <!--    </button>-->
       <div class= "container-button" fxLayout= "column" fxLayoutAlign = "flex-start">
-        <button mat-button (click)="openDialog()"
+        <button mat-button #drawer (click)="openDialog()"
                 class="btn-state-orden">
           ADMINISTRADOR
         </button>
