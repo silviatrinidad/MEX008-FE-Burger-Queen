@@ -1,10 +1,9 @@
+
 import { Component, OnInit, Inject } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import {UserService} from '../../user.service';
 import {concatAll} from 'rxjs/operators';
-import {matDrawerAnimations} from "@angular/material/sidenav";
-
-
+import {matDrawerAnimations} from '@angular/material/sidenav';
 
 
 @Component({
@@ -13,27 +12,28 @@ import {matDrawerAnimations} from "@angular/material/sidenav";
   styleUrls: ['./confirm-dialog.component.css']
 })
 export class ConfirmDialogComponent implements OnInit {
-
   email: string;
   password: string;
   msg: string;
   display = false;
 
-  constructor(public authService: UserService,
-              public dialogRef: MatDialogRef<ConfirmDialogComponent>,
-              @Inject(MAT_DIALOG_DATA) public message: string) { }
+  constructor(
+    public authService: UserService,
+    public dialogRef: MatDialogRef<ConfirmDialogComponent>,
+    @Inject(MAT_DIALOG_DATA) public message: string
+  ) {
+  }
 
   ngOnInit() {
   }
 
   onClickNO(): void {
-  this.dialogRef.close();
+    this.dialogRef.close();
   }
 
   login() {
     const user = this.authService.login('viridiana.avem@gmail.com', this.password);
-    user.
-    then(value => {
+    user.then(value => {
       this.msg = value;
       this.display = true;
       console.log(value);
@@ -48,6 +48,7 @@ export class ConfirmDialogComponent implements OnInit {
     this.email = '';
     this.password = '';
   }
+
   add(s) {
     if (this.password === undefined) {
       this.password = '' + s.toString();
@@ -55,5 +56,4 @@ export class ConfirmDialogComponent implements OnInit {
       this.password = this.password + s.toString();
     }
   }
-
 }

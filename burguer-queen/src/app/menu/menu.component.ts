@@ -1,4 +1,5 @@
 import {Component} from '@angular/core';
+import {OrdersService} from '../shared/orders.service';
 
 /**
  * @title Autosize sidenav
@@ -9,6 +10,7 @@ import {Component} from '@angular/core';
   styleUrls: ['menu.component.css'],
 })
 export class MenuComponent {
+  constructor(public orderService: OrdersService){}
   showFiller = false;
   "products" = [
     {
@@ -59,17 +61,19 @@ export class MenuComponent {
         individual:50
       },
       ingredientes:["Con todo", "Sin"],
-      Especificaciones:[]
-    }
+      Especificaciones:[],
+    },
     }
 
   ];
 
 
 
+
   totalOrder = 0;
   // Array temporal
   tempOrder = []; 
+  OrdersService: any;
 
 
   ngOnInit(){}
@@ -77,8 +81,14 @@ export class MenuComponent {
   onAddProduct(product){
     console.log(product);
     // suma de todos los precios
-    this.totalOrder = (this.totalOrder + product.price);
+    this.totalOrder = (this.totalOrder + product.type);
     this.tempOrder.push(product.name)
   }
-
+  removeItemOrder =(order) =>{
+    let index = this.tempOrder.indexOf(order);
+    if (index > -1) this.tempOrder.splice(index, 1);
+  }
+  onSubmit(){
+    console.log(this.orderService.myForm.value);
+  }
 }
