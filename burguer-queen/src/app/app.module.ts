@@ -28,7 +28,7 @@ import {MatCardModule} from '@angular/material/card';
 import {MatRadioModule} from '@angular/material/radio';
 import {MatGridListModule} from '@angular/material/grid-list';
 // import { OrderListComponent } from './order-list/order-list.component';
-import { OrdersComponent } from './orders/orders.component';
+// import { OrdersComponent } from './orders/orders.component';
 import { ModalDialogBillComponent } from './modal-dialog-bill/modal-dialog-bill.component';
 
 // Yael
@@ -47,9 +47,9 @@ import {AngularFireAuth, AngularFireAuthModule} from '@angular/fire/auth';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { environment } from '../environments/environment';
 import { UserService } from './user.service';
-import { HomeComponent } from './home/home.component';
-import { FormComponent } from './form/form.component';
 import {MatButtonModule, MatFormFieldModule, MatInputModule, MatRippleModule} from '@angular/material';
+// import { MenuModalComponent } from './menu/menu-modal/menu-modal.component';
+import { ReactiveFormsModule } from '@angular/forms';
 import { TimerComponent } from './timer/timer.component';
 // import { FormGroup, FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
 //
@@ -72,9 +72,11 @@ import { TimerComponent } from './timer/timer.component';
     DialogStatusOrdenComponent,
 
     OrdenPayComponent,
-    OrdersComponent,
+    // OrdersComponent,
     ConfirmDialogComponent,
-    TimerComponent
+    // MenuModalComponent
+    ConfirmDialogComponent,
+    TimerComponent,
 
   ],
   // Yael
@@ -98,13 +100,14 @@ import { TimerComponent } from './timer/timer.component';
     MatRadioModule,
     MatDialogModule,
     MatGridListModule,
+    ReactiveFormsModule,
 
     // Yael
     MatBadgeModule,
     DragDropModule,
     
     // Firebase
-    AngularFireModule.initializeApp(environment.firebaseConfig),
+    // AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAuthModule,
     AngularFirestoreModule,
     MatInputModule,
