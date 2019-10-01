@@ -1,21 +1,21 @@
 *{
-  font-family: Barlow Semi Condensed, Bold Italic;
+  font-family: Barlow Semi Condensed, Bold Italic, serif;
 }
 
 .example-sidenav {
     padding: 0;
     height: 100%;
-    width: 5vw;
+    width: 10vw;
     background: white;
     border-radius: 0 33px 33px 0;
   }
 
  .mat-drawer-container {
-    width: 100%;
+    width: 100vw;
     height: 80vh;
     background: #F0F0F0;
-    color: black; 
-  } 
+    color: black;
+  }
 
 .btn-lat-bar{
     background: red;
@@ -61,12 +61,12 @@
 
   .mat-drawer-container div .administrator {
     font-size: 20px;
-    font-weight: 2000px;
+    /*font-weight: 2000px;*/
   }
 
 
   .example-container{
-    width: 80vw;
+    width: 100vw;
     height: 100vw;
   }
 
@@ -104,6 +104,3 @@ div .rectangule{
   font-size: 20px;
   font-weight: bold;
 }
-
-
-

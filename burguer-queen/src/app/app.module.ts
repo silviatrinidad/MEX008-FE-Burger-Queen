@@ -9,7 +9,6 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {PruebaComponent} from './prueba/prueba.component';
 // Modulo de FlexLayout
 import {FlexLayoutModule} from '@angular/flex-layout';
-import {MatButtonModule} from '@angular/material/button';
 import {LateralBarComponent} from './lateral-bar/lateral-bar.component';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list';
@@ -24,7 +23,7 @@ import {MatMenuModule} from '@angular/material/menu';
 import { FormsModule } from '@angular/forms';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
-import { BarTotalComponent } from './bar-total/bar-total.component';
+// import { BarTotalComponent } from './bar-total/bar-total.component';
 import {MatCardModule} from '@angular/material/card';
 import {MatRadioModule} from '@angular/material/radio';
 import {MatGridListModule} from '@angular/material/grid-list';
@@ -32,13 +31,25 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import { OrdersComponent } from './orders/orders.component';
 import { ModalDialogBillComponent } from './modal-dialog-bill/modal-dialog-bill.component';
 
-//Yael
-import { StateOrdenComponent } from './state-orden/state-orden.component'
+// Yael
+import { StateOrdenComponent } from './state-orden/state-orden.component';
 import { MatDialogModule, MatBadgeModule } from '@angular/material';
 import { DialogStatusOrdenComponent } from './dialog-status-orden/dialog-status-orden.component';
 import { OrdenPayComponent } from './orden-pay/orden-pay.component';
-//
+import {BarTotalComponent} from './bar-total/bar-total.component';
+import { ConfirmDialogComponent } from './lateral-bar/confirm-dialog/confirm-dialog.component';
 
+// Firebase
+import { AngularFireModule } from '@angular/fire';
+import {AngularFireAuth, AngularFireAuthModule} from '@angular/fire/auth';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { environment } from '../environments/environment';
+import { UserService } from './user.service';
+import { HomeComponent } from './home/home.component';
+import { FormComponent } from './form/form.component';
+import {MatButtonModule, MatFormFieldModule, MatInputModule, MatRippleModule} from '@angular/material';
+// import { FormGroup, FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
+//
 
 @NgModule({
   exports: [],
@@ -56,11 +67,19 @@ import { OrdenPayComponent } from './orden-pay/orden-pay.component';
     ModalDialogBillComponent,
     StateOrdenComponent,
     DialogStatusOrdenComponent,
+<<<<<<< HEAD
     OrdenPayComponent, 
     OrdersComponent  
+=======
+
+    OrdenPayComponent,
+    OrdersComponent,
+    ConfirmDialogComponent
+
+>>>>>>> e9e287fdca985e1a4fd9a20dbbb518b82d76663d
   ],
-  //Yael
-  entryComponents: [DialogStatusOrdenComponent,ModalDialogBillComponent],
+  // Yael
+  entryComponents: [DialogStatusOrdenComponent, ModalDialogBillComponent, ConfirmDialogComponent],
 
 
 
@@ -80,13 +99,20 @@ import { OrdenPayComponent } from './orden-pay/orden-pay.component';
     MatRadioModule,
     MatDialogModule,
     MatGridListModule,
-    //Yael
-    MatBadgeModule    
+
+    // Yael
+    MatBadgeModule,
+    // Firebase
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireAuthModule,
+    AngularFirestoreModule,
+    MatInputModule,
+    MatRippleModule
   ],
   providers: [
-   
+    UserService
+
   ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
-
