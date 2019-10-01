@@ -103,7 +103,7 @@ import { TimerComponent } from './timer/timer.component';
     // Yael
     MatBadgeModule,
     // Firebase
-    // AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAuthModule,
     AngularFirestoreModule,
     MatInputModule,
