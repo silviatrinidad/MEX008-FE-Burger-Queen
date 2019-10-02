@@ -1,0 +1,10 @@
+.modalOrden{
+    width: 400px;
+    height: 200px;
+    margin: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+
+}
