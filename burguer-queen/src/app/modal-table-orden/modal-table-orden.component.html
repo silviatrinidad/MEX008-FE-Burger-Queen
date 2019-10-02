@@ -8,7 +8,7 @@
     <button mat-raised-button routerLinkActive="active"   routerLink="/take-order">Enviar</button>
 </div> -->
 
-<form [formGroup]="this.orderService.myForm" (ngSubmit)="onSubmit()">
+<form [formGroup]="this.orderService.myForm" (ngSubmit)="onSubmit()" class="modalOrden">
         <table cellspacing="0">
           <tr>
             <td>
