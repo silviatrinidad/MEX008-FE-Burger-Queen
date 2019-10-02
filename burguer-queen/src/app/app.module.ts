@@ -36,7 +36,7 @@ import { StateOrdenComponent } from './state-orden/state-orden.component';
 import { MatDialogModule, MatBadgeModule } from '@angular/material';
 import { DialogStatusOrdenComponent } from './dialog-status-orden/dialog-status-orden.component';
 import { OrdenPayComponent } from './orden-pay/orden-pay.component';
-import {BarTotalComponent} from './bar-total/bar-total.component';
+// import {BarTotalComponent} from './bar-total/bar-total.component';
 import { ConfirmDialogComponent } from './lateral-bar/confirm-dialog/confirm-dialog.component';
 
 // Firebase
@@ -51,6 +51,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { TimerComponent } from './timer/timer.component';
 // import { FormGroup, FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
 //
+import { MatTableModule } from '@angular/material';
+ 
 
 @NgModule({
   exports: [],
@@ -63,7 +65,7 @@ import { TimerComponent } from './timer/timer.component';
     TakeOrderComponent,
     BillComponent,
     BillClientComponent,
-    BarTotalComponent,
+    // BarTotalComponent,
     MenuComponent,
     ModalDialogBillComponent,
     StateOrdenComponent,
@@ -99,6 +101,7 @@ import { TimerComponent } from './timer/timer.component';
     MatDialogModule,
     MatGridListModule,
     ReactiveFormsModule,
+    MatTableModule,
 
     // Yael
     MatBadgeModule,
