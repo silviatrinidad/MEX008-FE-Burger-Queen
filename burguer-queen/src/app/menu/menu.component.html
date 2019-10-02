@@ -99,9 +99,9 @@
         <ul class="collection" fxLayout="column" fxLayoutAlign="start start">
           <li *ngFor="let order of tempOrder">
             <a (click)="removeItemOrder(order)">
-              <!-- <mat-icon class="clear">clear</mat-icon> -->
+              <mat-icon class="clear">clear</mat-icon>
             </a>
-            <!-- <span>{{order}}</span> -->
+            <span>{{order}}</span>
           </li>
         </ul>
       </div>
@@ -111,7 +111,7 @@
         <p>$</p>
       </div>
       <br>
-      <button class="btn-sendOrder">Enviar a cocina</button>
+      <button class="btn-sendOrder" (click)="onSubmit()">Enviar a cocina</button>
 
       <!-- </div> -->
 
@@ -168,7 +168,7 @@
 
 
   <!-- <div> -->
-  <form [formGroup]="this.orderService.myForm" (ngSubmit)="onSubmit()">
+  <!-- <form [formGroup]="this.orderService.myForm" (ngSubmit)="onSubmit()">
     <table cellspacing="0">
       <tr>
         <td>
@@ -190,5 +190,5 @@
         </td>
       </tr>
     </table>
-  </form>
+  </form> -->
   <!-- </div> -->
