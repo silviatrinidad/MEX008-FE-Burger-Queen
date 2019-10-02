@@ -20,14 +20,15 @@
       letter-spacing: 0;
       color: #FFFFFF;
       opacity: 1;
+     
       
     }
     
     
     .radio-group {
         display: flex;
-        flex-direction: column;
-        padding: 20px;
+        flex-direction: column; 
+        padding: 15px;
         background: #C9C9C9 0% 0% no-repeat padding-box;
         border-radius: 14px;
         opacity: 1;
@@ -35,7 +36,7 @@
         font: 18px/22px Barlow Semi Condensed;
         letter-spacing: 0;
         color: #000000;
-
+       
       }
       
       .radio-button {
@@ -57,3 +58,5 @@
         opacity: 1;
         padding: 20px;
       }
+
+     
