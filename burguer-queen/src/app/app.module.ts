@@ -51,6 +51,7 @@ import {MatButtonModule, MatFormFieldModule, MatInputModule, MatRippleModule} fr
 // import { MenuModalComponent } from './menu/menu-modal/menu-modal.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { TimerComponent } from './timer/timer.component';
+import { ModalTableOrdenComponent } from './modal-table-orden/modal-table-orden.component';
 // import { FormGroup, FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
 //
 
@@ -77,12 +78,14 @@ import { TimerComponent } from './timer/timer.component';
     // MenuModalComponent
     ConfirmDialogComponent,
     TimerComponent,
+    ModalTableOrdenComponent,
 
   ],
   // Yael
-  entryComponents: [DialogStatusOrdenComponent, ModalDialogBillComponent, ConfirmDialogComponent],
-
-
+  entryComponents: [DialogStatusOrdenComponent, 
+                    ModalDialogBillComponent, 
+                    ConfirmDialogComponent, 
+                    ModalTableOrdenComponent],
 
   imports: [
     BrowserModule,
