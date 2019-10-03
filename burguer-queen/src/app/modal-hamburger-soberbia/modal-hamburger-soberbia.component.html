@@ -1,2 +1,5 @@
-
-<p>modal-hamburger-soberbia works!</p>
+<div fxLayout="row" fxLayoutAlign="space-evenly start" class="list-hamburguer">
+  <button class="nameProduct" *ngFor="let product of products" (click)="onAddProduct(product)" >
+    {{product.name}}
+  </button>
+</div>

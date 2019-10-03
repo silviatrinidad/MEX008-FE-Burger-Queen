@@ -9,7 +9,8 @@ import { DataSource } from '@angular/cdk/table';
 export interface PeriodicElement {
   orderNumber: number;
   customerName: string;
-  // products:string;
+  products:string;
+  totalOrder:number;
 }
 
 
@@ -27,54 +28,38 @@ export class MenuComponent {
   "products" = [
     {
       name: "Soberbia",
-      datalle:{
-      pan:["masa Madre", "tradicional"],
-      type:{
-        combo:65,
-        individual:50
-        },
+      pan:["Masa Madre", "Tradicional"],
+      type:["Individual","Combo"],
+      price:[50, 65],
       ingredientes:["Con todo", "Sin"],
       Especificaciones:[]
-      }
     },
     
     {
       name: "Malicia",
-      detalle:{
-      pan:["masa madre", "tradicional"],
-      type:{
-        combo:65,
-        individual:50
-      },
+      pan:["Masa Madre", "Tradicional"],
+      type:["Individual","Combo"],
+      price:[50, 65],
       ingredientes:["Con todo", "Sin"],
       Especificaciones:[]
-    }
     },
 
     {
       name: "Gula",
-      detalle:{
-      pan:["masa madre", "tradicional"],
-      type:{
-        combo:65,
-        individual:50
-      },
+      pan:["Masa Madre", "Tradicional"],
+      type:["Individual","Combo"],
+      price:[50, 65],
       ingredientes:["Con todo", "Sin"],
       Especificaciones:[]
-    }
     },
 
     {
       name: "Encarnación",
-      detalle:{
-      pan:["masa madre", "tradicional"],
-      type:{
-        combo:65,
-        individual:50
-      },
+      pan:["Masa Madre", "Tradicional"],
+      type:["Individual","Combo"],
+      price:[50, 65],
       ingredientes:["Con todo", "Sin"],
-      Especificaciones:[],
-    },
+      Especificaciones:[]
     }
 
   ];
@@ -98,9 +83,16 @@ export class MenuComponent {
   onAddProduct(product){
     console.log(product);
     // suma de todos los precios
-    this.totalOrder = (this.totalOrder + product.type);
-    this.tempOrder.push(product.name)
+    this.totalOrder = (this.totalOrder + product.price[0]);
+    console.log(this.totalOrder )
+    // Impresión de precio y producto en comanda
+    this.tempOrder.push(product.name + " " + "$"+ product.price[0])
   }
+
+
+
+
+
   removeItemOrder =(order) =>{
     let index = this.tempOrder.indexOf(order);
     if (index > -1) this.tempOrder.splice(index, 1);
@@ -120,9 +112,8 @@ export class MenuComponent {
     this.totalOrder=0;
     // Reinicializando el formulario
     this.orderService.myForm.reset();
-
-
   }
+
 
   ngAfterViewInit(){
     this.dataSource.sort = this.sort;

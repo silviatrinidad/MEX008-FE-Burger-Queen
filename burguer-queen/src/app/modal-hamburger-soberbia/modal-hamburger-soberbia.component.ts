@@ -8,11 +8,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./modal-hamburger-soberbia.component.css']
 })
 export class ModalHamburgerSoberbiaComponent implements OnInit {
+  constructor(public dialog) { }
 
-  constructor() { }
+  openDialog() {
+    const dialogRef = this.dialog.open(ModalHamburgerSoberbiaComponent, {
+    });
 
+    dialogRef.afterClosed().subscribe(result => {
+      result
+    });
+  }
   ngOnInit() {
 
   }
 
+
 }
+
