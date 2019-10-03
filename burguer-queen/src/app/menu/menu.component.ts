@@ -1,7 +1,10 @@
 import {Component, ViewChild} from '@angular/core';
 import {OrdersService} from '../shared/orders.service';
-import { MatTableDataSource, MatSort } from '@angular/material';
+import { MatTableDataSource, MatSort, MatDialog } from '@angular/material';
 import { DataSource } from '@angular/cdk/table';
+
+//Yael
+import { ModalHamburgerSoberbiaComponent } from './../modal-hamburger-soberbia/modal-hamburger-soberbia.component';
 /**
  * @title Autosize sidenav
  */
@@ -23,7 +26,10 @@ export class MenuComponent {
   displayedColumns: string[] = ['orderNumber', 'customerName','actions'];
   dataSource= new MatTableDataSource ();
 
-  constructor(private orderService: OrdersService){}
+ 
+
+
+  constructor(private orderService: OrdersService, public dialog: MatDialog){}
   showFiller = false;
   "products" = [
     {
@@ -64,9 +70,6 @@ export class MenuComponent {
 
   ];
 
-
-
-
   totalOrder = 0;
   // Array temporal
   tempOrder = []; 
@@ -74,7 +77,6 @@ export class MenuComponent {
 
 @ViewChild(MatSort,{static: false}) sort: MatSort;
  
-
   ngOnInit(){
   //  llamando todas las órdenes
     this.getAllOrders();
@@ -132,5 +134,9 @@ export class MenuComponent {
     order.completed = true;
     this.orderService.updateOrders(order);
   }
-}
 
+  //Yael
+  openDialog(){
+    this.dialog.open(ModalHamburgerSoberbiaComponent);
+  }
+}

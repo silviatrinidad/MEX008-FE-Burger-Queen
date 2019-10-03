@@ -15,7 +15,6 @@ export class ModalHamburgerSoberbiaComponent implements OnInit {
     });
 
     dialogRef.afterClosed().subscribe(result => {
-      result
     });
   }
   ngOnInit() {

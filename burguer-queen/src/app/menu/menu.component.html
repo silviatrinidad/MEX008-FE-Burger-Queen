@@ -33,7 +33,7 @@
         <div class="container-hamburguers">
 
           <div fxLayout="row" fxLayoutAlign="space-evenly start" class="list-hamburguer">
-            <button class="nameProduct" *ngFor="let product of products" (click)="onAddProduct(product)">
+            <button class="nameProduct" *ngFor="let product of products" (click)="onAddProduct(product)" (click)="openDialog()">
              {{product.name}}
             </button>
           </div>
