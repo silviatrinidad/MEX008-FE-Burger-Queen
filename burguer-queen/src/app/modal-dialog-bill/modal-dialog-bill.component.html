@@ -1,5 +1,6 @@
-<h1 mat-dialog-title>EFECTIVO</h1>
+
 <div mat-dialog-content >
+  <h1 mat-dialog-title>EFECTIVO</h1>
   <ul>
     <li>
      Total por pagar :  <p></p>
@@ -15,49 +16,51 @@
     </li>
   </ul>
 
+<br>
+<br>  
 <div  fxLayout = "row"   fxLayoutAlign="space-around" class="">
   <button mat-raised-button class="btn-cancel" > Cancelar</button>
   <button mat-raised-button class="btn-pay">Pagar</button>
 </div>  
 <br>
-  <mat-grid-list cols="3" rowHeight="54px" class="container-bill">
+
+  <mat-grid-list cols="3" rowHeight="30px" class="container-bill">
     
       <mat-grid-tile [colspan]=1 [rowspan]=1 class="tile"> 
-        1 
+          <button class="button-number">1</button>
       </mat-grid-tile>    
       <mat-grid-tile [colspan]=1 [rowspan]=1 class="tile" > 
-        2 
+          <button class="button-number">2</button>
       </mat-grid-tile>
       <mat-grid-tile [colspan]=1 [rowspan]=1 class="tile"> 
-        3 
+          <button class="button-number">3</button>
       </mat-grid-tile>
       <mat-grid-tile [colspan]=1 [rowspan]=1 class="tile">  
-        4
+          <button class="button-number">4</button>
       </mat-grid-tile>
       <mat-grid-tile [colspan]=1 [rowspan]=1 class="tile" >  
-        5
+          <button class="button-number">5</button>
       </mat-grid-tile>
       <mat-grid-tile [colspan]=1 [rowspan]=1 class="tile">
-        6  
+          <button class="button-number">6</button>
       </mat-grid-tile>
       <mat-grid-tile [colspan]=1 [rowspan]=1 class="tile" >
-        7  
+          <button class="button-number">7</button>  
       </mat-grid-tile>
       <mat-grid-tile [colspan]=1 [rowspan]=1 class="tile">
-        8  
+          <button class="button-number">8</button>
       </mat-grid-tile>
       <mat-grid-tile [colspan]=1 [rowspan]=1 class="tile">  
-        9
+          <button class="button-number">9</button>
       </mat-grid-tile>
       <mat-grid-tile [colspan]=1 [rowspan]=1 class="tile gray">
          
       </mat-grid-tile>
       <mat-grid-tile [colspan]=1 [rowspan]=1 class="tile " >
-        0
+          <button class="button-number">0</button>
       </mat-grid-tile>
-      <mat-grid-tile [colspan]=1 [rowspan]=1 class="tile gray">  
-        <img src="./assets/icons8-símbolo-vaciar-50.png" alt="delete">
+      <mat-grid-tile [colspan]=1 [rowspan]=1 class="tile"> 
+          <button  class="button-delete">Borrar</button> 
       </mat-grid-tile>
   </mat-grid-list>
-
 </div>

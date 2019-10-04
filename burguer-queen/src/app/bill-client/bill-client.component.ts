@@ -8,6 +8,7 @@ import { ModalDialogBillComponent } from '../modal-dialog-bill/modal-dialog-bill
   styleUrls: ['./bill-client.component.css']
 })
 export class BillClientComponent {
+
   cash :number
   favoriteSeason: string;
   pays: string[] = ['Cuenta Completa', 'Dividir por persona', 'Dividir equitativamente'];
@@ -28,20 +29,3 @@ export class BillClientComponent {
  
 }
 
-
-
-// @Component({
-//   selector: 'modal-pay-cash-component',
-//   templateUrl: './modal-dialog-bill/modal-dialog-bill.html',
-//   styleUrls: ['./modal-dialog-bill/modal-dialog-bill.css'] 
-
-//  })
-// export class ModalDialogBillComponent {
-//   constructor(public dialogRef: MatDialogRef<ModalDialogBillComponent>,
-//     @Inject(MAT_DIALOG_DATA) public data: DialogData) {}
-
-//   onNoClick(): void {
-//     this.dialogRef.close();
-//   }
-
-// }

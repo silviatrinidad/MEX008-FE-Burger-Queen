@@ -41,10 +41,9 @@ export class ModalTableOrdenComponent implements OnInit {
     this.totalOrder=0;
     // Reinicializando el formulario
     this.orderService.myForm.reset();
-
-
     
   }
+
   ngAfterViewInit(){
     this.dataSource.sort = this.sort;
   }

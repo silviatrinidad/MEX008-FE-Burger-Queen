@@ -55,6 +55,7 @@ import { ModalTableOrdenComponent } from './modal-table-orden/modal-table-orden.
 // import { FormGroup, FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
 //
 import { MatTableModule } from '@angular/material';
+import { ModalHamburgerSoberbiaComponent } from './modal-hamburger-soberbia/modal-hamburger-soberbia.component';
  
 
 @NgModule({
@@ -81,13 +82,14 @@ import { MatTableModule } from '@angular/material';
     ConfirmDialogComponent,
     TimerComponent,
     ModalTableOrdenComponent,
-
+    ModalHamburgerSoberbiaComponent,
   ],
   // Yael
   entryComponents: [DialogStatusOrdenComponent, 
                     ModalDialogBillComponent, 
                     ConfirmDialogComponent, 
-                    ModalTableOrdenComponent],
+                    ModalTableOrdenComponent,
+                    ModalHamburgerSoberbiaComponent],
 
   imports: [
     BrowserModule,
