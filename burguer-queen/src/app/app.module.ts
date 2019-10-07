@@ -33,11 +33,13 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import { ModalDialogBillComponent } from './modal-dialog-bill/modal-dialog-bill.component';
 
 // Yael
-import { StateOrdenComponent } from './state-orden/state-orden.component';
 import { MatDialogModule, MatBadgeModule } from '@angular/material';
+import { DragDropModule } from '@angular/cdk/drag-drop';
+
+import { StateOrdenComponent } from './state-orden/state-orden.component';
 import { DialogStatusOrdenComponent } from './dialog-status-orden/dialog-status-orden.component';
 import { OrdenPayComponent } from './orden-pay/orden-pay.component';
-import {BarTotalComponent} from './bar-total/bar-total.component';
+// import {BarTotalComponent} from './bar-total/bar-total.component';
 import { ConfirmDialogComponent } from './lateral-bar/confirm-dialog/confirm-dialog.component';
 
 // Firebase
@@ -50,8 +52,11 @@ import {MatButtonModule, MatFormFieldModule, MatInputModule, MatRippleModule} fr
 // import { MenuModalComponent } from './menu/menu-modal/menu-modal.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { TimerComponent } from './timer/timer.component';
-// import { FormGroup, FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';vi
-
+import { ModalTableOrdenComponent } from './modal-table-orden/modal-table-orden.component';
+// import { FormGroup, FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
+//
+import { MatTableModule } from '@angular/material';
+import { ModalHamburgerSoberbiaComponent } from './modal-hamburger-soberbia/modal-hamburger-soberbia.component';
 
 
 @NgModule({
@@ -65,7 +70,7 @@ import { TimerComponent } from './timer/timer.component';
     TakeOrderComponent,
     BillComponent,
     BillClientComponent,
-    BarTotalComponent,
+    // BarTotalComponent,
     MenuComponent,
     ModalDialogBillComponent,
     StateOrdenComponent,
@@ -77,12 +82,15 @@ import { TimerComponent } from './timer/timer.component';
     // MenuModalComponent
     ConfirmDialogComponent,
     TimerComponent,
-
+    ModalTableOrdenComponent,
+    ModalHamburgerSoberbiaComponent,
   ],
   // Yael
-  entryComponents: [DialogStatusOrdenComponent, ModalDialogBillComponent, ConfirmDialogComponent],
-
-
+  entryComponents: [DialogStatusOrdenComponent,
+                    ModalDialogBillComponent,
+                    ConfirmDialogComponent,
+                    ModalTableOrdenComponent,
+                    ModalHamburgerSoberbiaComponent],
 
   imports: [
     BrowserModule,
@@ -101,9 +109,12 @@ import { TimerComponent } from './timer/timer.component';
     MatDialogModule,
     MatGridListModule,
     ReactiveFormsModule,
+    MatTableModule,
 
     // Yael
     MatBadgeModule,
+    DragDropModule,
+
     // Firebase
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAuthModule,

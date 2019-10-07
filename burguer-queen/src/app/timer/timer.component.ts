@@ -32,5 +32,7 @@ export class TimerComponent{
 
   ngOnInit() {
   }
+ 
+  
 
 }

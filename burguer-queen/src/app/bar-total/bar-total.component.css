@@ -1,4 +1,4 @@
-/* *{
+*{
   font-family: 'Barlow Semi Condensed', Bold Italic;
 }
 
@@ -74,7 +74,7 @@
   height: 30vh;
 }
 
-/* .count p{
+.count p{
   margin: 0;
   padding: 0;
   width: 10vw;
@@ -91,7 +91,7 @@
   height: 4vh;
 }
 
-.total{
+.total {
   width: 20vw;
   height: 4vh;
-} */
+}
