@@ -1,39 +1,59 @@
-import {Component, ViewChild, OnInit } from '@angular/core';
-import {MatSidenav} from '@angular/material/sidenav';
 import {MatDialog} from '@angular/material/dialog';
 import {ConfirmDialogComponent} from './confirm-dialog/confirm-dialog.component';
+import { Component } from '@angular/core';
+import { UserService} from '../user.service';
+import {OrdersService} from '../shared/orders.service';
 
 
-/** @title Sidenav with custom escape and backdrop click behavior */
 @Component({
   selector: 'app-lateral-bar',
   templateUrl: 'lateral-bar.component.html',
   styleUrls: ['lateral-bar.component.css'],
 })
 export class LateralBarComponent {
-  @ViewChild('sidenav', {static: false}) sidenav: MatSidenav;
 
-  reason = '';
-
+  events: string[] = [];
+  opened: boolean;
+  testVariable: boolean = false;
+  mode = ('mode');
   shouldRun = [/(^|\.)plnkr\.co$/, /(^|\.)stackblitz\.io$/].some(h => h.test(window.location.host));
 
-  close(reason: string) {
-    this.reason = reason;
-    this.sidenav.close();
+
+  // @ts-ignore
+  // @ts-ignore
+  constructor(
+    public  userService: UserService,
+    public dialog: MatDialog,
+  ) {
   }
 
-  constructor(
-    public dialog: MatDialog
-  ) {}
   openDialog(): void {
-    const dialogRef = this.dialog.open(ConfirmDialogComponent, {});
+    const dialogRef = this.dialog.open(ConfirmDialogComponent);
     dialogRef.afterClosed().subscribe(res => {
-      console.log(res);
+      this.testVariable = res.logged;
+    });
+  }
+
+  estaLogeado() {
+    let log;
+    log = sessionStorage.getItem('log');
+    if (log !== null) {
+      return log.toString() === 'true';
+    } else {
+      return false;
+    }
+  }
+
+  logout() {
+    this.userService.signOut()
+      .then(() => {
+        sessionStorage.clear();
+        window.location.host = '';
+      }).catch((error) => {
+      console.log(error);
     });
   }
 }
-
-
 
 
 

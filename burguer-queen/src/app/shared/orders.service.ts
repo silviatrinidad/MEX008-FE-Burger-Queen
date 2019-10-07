@@ -3,16 +3,27 @@ import { FormControl, FormGroup } from '@angular/forms';
 import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/firestore';
 import { Observable} from 'rxjs';
 import {map} from 'rxjs/operators';
+import { AngularFireAuth } from "@angular/fire/auth";
+// import { UserService} from '../user.service';
 
 @Injectable({
   providedIn: 'root'
+
 })
+
 export class OrdersService {
+// guardando el array de todas las órdenes para poder llamarlas en otro componente
+  collectionOrders(){
+    return this.orders;
+  }
+  // Llamando colleción de Firebase
     private ordersCollection: AngularFirestoreCollection<any>;
+    // Tipo de la collección
     orders:Observable<any[]>;
 
   constructor(private readonly afs:AngularFirestore) {
       this.ordersCollection = afs.collection<any>('orders');
+      // Trayendo el Id de las colecciones
       this.orders = this.ordersCollection.snapshotChanges().pipe(map(
           actions => actions.map(a =>{
      //   Recorriendo documentos de firebase
@@ -32,23 +43,24 @@ export class OrdersService {
   });
 
 
-  getOrders(){
-      return this.orders;
+  getOrders() {
+    return this.orders;
   }
 
-  updateOrders(order:any){
-      return this.ordersCollection.doc(order.id).update(order);
+  updateOrders(order: any) {
+    return this.ordersCollection.doc(order.id).update(order);
   }
 
-  deleteOrders(id:string){
+  deleteOrders(id: string) {
     return this.ordersCollection.doc(id).delete();
   }
 
-  createOrders(order:any){
-      return this.ordersCollection.add(order);
+  createOrders(order: any) {
+    return this.ordersCollection.add(order);
   }
-
 }
+
+
 
 
 
@@ -80,4 +92,3 @@ export class OrdersService {
 //       .doc(data.payload.doc.id)
 //       .delete();
 //   }
-

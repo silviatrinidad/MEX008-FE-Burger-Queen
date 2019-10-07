@@ -1,4 +1,4 @@
-*{
+/* *{
   font-family: 'Barlow Semi Condensed', Bold Italic;
 }
 
@@ -94,5 +94,9 @@
 .total{
   width: 20vw;
   height: 4vh;
+<<<<<<< HEAD
 } 
-
+ */
+=======
+}
+>>>>>>> 3ec466f86ff94b98d4c653031f345a58047c4d0c

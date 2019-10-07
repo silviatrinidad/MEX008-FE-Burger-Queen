@@ -3,6 +3,7 @@ import { Observable } from 'rxjs';
 import * as firebase from 'firebase/app';
 import { AngularFireAuth } from '@angular/fire/auth';
 
+
 @Injectable()
 export class UserService {
   user: Observable<firebase.User>;
@@ -18,10 +19,7 @@ export class UserService {
       .signInWithEmailAndPassword(email, password);
   }
 
-  //
-  // logout() {
-  //   this.firebaseAuth
-  //     .auth
-  //     .signOut();
-  // }
+  signOut() {
+    return this.firebaseAuth.auth.signOut();
+  }
 }

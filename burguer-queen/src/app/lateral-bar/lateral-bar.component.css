@@ -1,34 +1,32 @@
+
 *{
   font-family: Barlow Semi Condensed, Bold Italic, serif;
 }
 
 .example-sidenav {
-    padding: 0;
+    padding-top: 92px;
     height: 100%;
-    width: 10vw;
+    width: 13vw;
     background: white;
     border-radius: 0 33px 33px 0;
   }
 
- .mat-drawer-container {
+ .mat-sidenav-container {
     width: 100vw;
     height: 80vh;
     background: #F0F0F0;
     color: black;
   }
 
-.btn-lat-bar{
-    background: red;
-  }
 
   .example-sidenav-content{
     position:fixed;
     /* -webkit-box-shadow:5px 0px 5px 0px rgba(50, 50, 50, 0.75);
     -moz-box-shadow:5px 0px 5px 0px rgba(50, 50, 50, 0.75);
-    box-shadow:5px 0px 5px 0px rgba(50, 50, 50, 0.75); */
+    box-shadow:5px 0px 5px 0px rgba(50, 50, 50, 0.75);
     height: 100vh;
     width: 80vw;
-    border-radius: 0 33px 33px 0;
+    border-radius: 0 33px 33px 0;*/
 
   }
 
@@ -37,29 +35,36 @@
     background: transparent;
     margin: 0;
     padding:0;
-    font-size: 20px;
+    font-size: 18px;
     writing-mode: vertical-lr;
     transform: rotate(270deg);
   }
 
 
-  .mat-drawer-container .list-administrator ul li a{
+  .mat-sidenav-container .list-administrator ul li a{
     text-decoration: none;
     list-style: none;
     color: black;
-    font-size: 20px;
+    font-size: 18px;
   }
 
-  .mat-drawer-container .list-administrator ul li a:hover{
+  .mat-sidenav-container .list-administrator ul li a:hover{
     background: #FFE867;
     border-radius: 5px;
   }
 
-  .mat-drawer-container .list-administrator ul li {
-    list-style: none;
-  }
+  .mat-sidenav-container .list-administrator ul li {
+         list-style: none;
+         padding-bottom: 10px;
+       }
 
-  .mat-drawer-container div .administrator {
+
+
+.mat-sidenav-container .list-administrator ul{
+  padding: 0;
+}
+
+  .mat-sidenav-container div .administrator {
     font-size: 20px;
     /*font-weight: 2000px;*/
   }
@@ -67,7 +72,7 @@
 
   .example-container{
     width: 100vw;
-    height: 100vw;
+    height: 100vh;
   }
 
 
@@ -90,7 +95,7 @@ div .rectangule{
     width: 100px;
 }
 
-.mat-drawer-container .example-sidenav-content .button-administrator{
+.mat-sidenav-container .example-sidenav-content .button-administrator{
   border:2px solid white;
   border-radius: 0 70px 70px 0;
   width: 8vw;
@@ -103,4 +108,10 @@ div .rectangule{
   background: white;
   font-size: 20px;
   font-weight: bold;
+}
+
+
+.bar-administrator img {
+  padding-bottom: 21px;
+
 }
