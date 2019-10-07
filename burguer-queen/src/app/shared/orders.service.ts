@@ -6,25 +6,11 @@ import {map} from 'rxjs/operators';
 import { AngularFireAuth } from "@angular/fire/auth";
 // import { UserService} from '../user.service';
 
-@Injectable()
-export class UserService {
-  user: Observable<firebase.User>;
-
-  constructor(private firebaseAuth: AngularFireAuth) {
-    this.user = firebaseAuth.authState;
-  }
+@Injectable({
+  providedIn: 'root'
 
 
-  login(email: string, password: string): any {
-    return this.firebaseAuth
-      .auth
-      .signInWithEmailAndPassword(email, password);
-  }
-
-  signOut() {
-    return this.firebaseAuth.auth.signOut();
-  }
-}
+})
 export class OrdersService {
 // guardando el array de todas las órdenes para poder llamarlas en otro componente
   collectionOrders(){
