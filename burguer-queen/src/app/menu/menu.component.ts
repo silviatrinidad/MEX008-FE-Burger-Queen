@@ -19,7 +19,7 @@ export interface PeriodicElement {
 export class MenuComponent {
  displayedColumns: string[] = ['orderNumber', 'customerName','actions'];
  dataSource= new MatTableDataSource ();
- constructor(private orderService: OrdersService){}
+ constructor(public orderService: OrdersService){}
  showFiller = false;
  "products" = [
    {
@@ -64,6 +64,7 @@ export class MenuComponent {
  //  llamando todas las órdenes
    this.getAllOrders();
  }
+
  onAddProduct(product){
    console.log(product);
    // suma de todos los precios
@@ -72,6 +73,8 @@ export class MenuComponent {
    // Impresión de precio y producto en comanda
    this.tempOrder.push(product.name + " " + "$"+ product.price[0])
  }
+
+
  removeItemOrder =(order) =>{
    let index = this.tempOrder.indexOf(order);
    if (index > -1) this.tempOrder.splice(index, 1);

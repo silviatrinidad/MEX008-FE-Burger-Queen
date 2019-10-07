@@ -8,11 +8,18 @@ import {map} from 'rxjs/operators';
   providedIn: 'root'
 })
 export class OrdersService {
+// guardando el array de todas las órdenes para poder llamarlas en otro componente
+  collectionOrders(){
+    return this.orders;
+  }
+  // Llamando colleción de Firebase
     private ordersCollection: AngularFirestoreCollection<any>;
+    // Tipo de la collección
     orders:Observable<any[]>;
 
   constructor(private readonly afs:AngularFirestore) {
       this.ordersCollection = afs.collection<any>('orders');
+      // Trayendo el Id de las colecciones
       this.orders = this.ordersCollection.snapshotChanges().pipe(map(
           actions => actions.map(a =>{
      //   Recorriendo documentos de firebase
@@ -49,6 +56,8 @@ export class OrdersService {
   }
 
 }
+
+
 
 
 

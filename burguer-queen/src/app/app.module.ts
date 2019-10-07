@@ -53,7 +53,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { TimerComponent } from './timer/timer.component';
 import { ModalTableOrdenComponent } from './modal-table-orden/modal-table-orden.component';
 // import { FormGroup, FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
-//
+import * as firebase from 'firebase/app';
 import { MatTableModule } from '@angular/material';
 import { ModalHamburgerSoberbiaComponent } from './modal-hamburger-soberbia/modal-hamburger-soberbia.component';
  
