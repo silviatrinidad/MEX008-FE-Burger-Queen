@@ -9,6 +9,7 @@ div .mdl-button--raised{
     width: 80px;
     padding: 0;
     margin: 9px;
+    border-radius:8px;
 }
 
 div .rectangule{

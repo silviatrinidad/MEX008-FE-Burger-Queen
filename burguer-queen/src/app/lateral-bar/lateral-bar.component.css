@@ -11,7 +11,7 @@
     border-radius: 0 33px 33px 0;
   }
 
- .mat-drawer-container {
+ .mat-sidenav-container {
     width: 100vw;
     height: 80vh;
     background: #F0F0F0;
@@ -44,23 +44,23 @@
   }
 
 
-  .mat-drawer-container .list-administrator ul li a{
+  .mat-sidenav-container .list-administrator ul li a{
     text-decoration: none;
     list-style: none;
     color: black;
     font-size: 20px;
   }
 
-  .mat-drawer-container .list-administrator ul li a:hover{
+  .mat-sidenav-container .list-administrator ul li a:hover{
     background: #FFE867;
     border-radius: 5px;
   }
 
-  .mat-drawer-container .list-administrator ul li {
+  .mat-sidenav-container .list-administrator ul li {
     list-style: none;
   }
 
-  .mat-drawer-container div .administrator {
+  .mat-sidenav-container div .administrator {
     font-size: 20px;
     /*font-weight: 2000px;*/
   }
@@ -91,7 +91,7 @@ div .rectangule{
     width: 100px;
 }
 
-.mat-drawer-container .example-sidenav-content .button-administrator{
+.mat-sidenav-container .example-sidenav-content .button-administrator{
   border:2px solid white;
   border-radius: 0 70px 70px 0;
   width: 8vw;
