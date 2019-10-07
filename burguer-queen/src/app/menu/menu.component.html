@@ -34,7 +34,7 @@
 
           <div fxLayout="row" fxLayoutAlign="space-evenly start" class="list-hamburguer">
             <button class="nameProduct" *ngFor="let product of products" (click)="onAddProduct(product)">
-             {{product.name}}
+              {{product.name}}
             </button>
           </div>
         </div>
@@ -64,13 +64,13 @@
           <td mat-cell *matCellDef="let element">Cliente: {{element.customerName}} </td>
         </div>
         <div matColumnDef="actions">
-            <p mat-header-cell *matHeaderCellDef></p>
-            <td mat-cell *matCellDef="let element">
-              <!-- <mat-icon (click)="onChangeStatus(element)">edit</mat-icon> -->
-              <!-- &nbsp; -->
-              <mat-icon (click)="onDelete(element.id)">clear</mat-icon>
-            </td>
-          </div>
+          <p mat-header-cell *matHeaderCellDef></p>
+          <td mat-cell *matCellDef="let element">
+            <!-- <mat-icon (click)="onChangeStatus(element)">edit</mat-icon> -->
+            <!-- &nbsp; -->
+            <mat-icon (click)="onDelete(element.id)">clear</mat-icon>
+          </td>
+        </div>
         <tr mat-header-row *matHeaderRowDef="displayedRows"></tr>
         <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
       </table>
@@ -109,6 +109,7 @@
 
     </div>
   </div>
+</div>
 
 
   <!-- Especificaciones de producto -->
@@ -151,12 +152,9 @@
   <!-- </div> -->
 
 
-  
+
 
   <!-- </div> -->
 
   <!-- </div> -->
   <!-- </div> -->
-
-
-
