@@ -1,6 +1,8 @@
 import {MatDialog} from '@angular/material/dialog';
 import {ConfirmDialogComponent} from './confirm-dialog/confirm-dialog.component';
 import { Component } from '@angular/core';
+import { UserService} from '../user.service';
+
 
 
 @Component({
@@ -20,6 +22,7 @@ export class LateralBarComponent {
   // @ts-ignore
   // @ts-ignore
   constructor(
+    public  userService: UserService,
     public dialog: MatDialog,
   ) {
   }
@@ -41,8 +44,16 @@ export class LateralBarComponent {
     }
   }
 
+  logout() {
+    this.userService.signOut()
+      .then(() => {
+        sessionStorage.clear();
+        window.location.host = '';
+      }).catch((error) => {
+      console.log(error);
+    });
+  }
 }
-
 
 
 

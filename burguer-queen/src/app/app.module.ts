@@ -34,7 +34,7 @@ import { ModalDialogBillComponent } from './modal-dialog-bill/modal-dialog-bill.
 
 // Yael
 import { MatDialogModule, MatBadgeModule } from '@angular/material';
-import { DragDropModule } from '@angular/cdk/drag-drop'
+import { DragDropModule } from '@angular/cdk/drag-drop';
 
 import { StateOrdenComponent } from './state-orden/state-orden.component';
 import { DialogStatusOrdenComponent } from './dialog-status-orden/dialog-status-orden.component';
@@ -86,9 +86,9 @@ import { ModalHamburgerSoberbiaComponent } from './modal-hamburger-soberbia/moda
     ModalHamburgerSoberbiaComponent,
   ],
   // Yael
-  entryComponents: [DialogStatusOrdenComponent, 
-                    ModalDialogBillComponent, 
-                    ConfirmDialogComponent, 
+  entryComponents: [DialogStatusOrdenComponent,
+                    ModalDialogBillComponent,
+                    ConfirmDialogComponent,
                     ModalTableOrdenComponent,
                     ModalHamburgerSoberbiaComponent],
 
@@ -114,7 +114,7 @@ import { ModalHamburgerSoberbiaComponent } from './modal-hamburger-soberbia/moda
     // Yael
     MatBadgeModule,
     DragDropModule,
-    
+
     // Firebase
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAuthModule,
