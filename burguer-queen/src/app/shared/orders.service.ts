@@ -10,6 +10,7 @@ import { AngularFireAuth } from "@angular/fire/auth";
   providedIn: 'root'
 
 })
+
 export class OrdersService {
 // guardando el array de todas las órdenes para poder llamarlas en otro componente
   collectionOrders(){
