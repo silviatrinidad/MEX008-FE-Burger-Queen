@@ -3,10 +3,28 @@ import { FormControl, FormGroup } from '@angular/forms';
 import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/firestore';
 import { Observable} from 'rxjs';
 import {map} from 'rxjs/operators';
+import { AngularFireAuth } from "@angular/fire/auth";
+// import { UserService} from '../user.service';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
+export class UserService {
+  user: Observable<firebase.User>;
+
+  constructor(private firebaseAuth: AngularFireAuth) {
+    this.user = firebaseAuth.authState;
+  }
+
+
+  login(email: string, password: string): any {
+    return this.firebaseAuth
+      .auth
+      .signInWithEmailAndPassword(email, password);
+  }
+
+  signOut() {
+    return this.firebaseAuth.auth.signOut();
+  }
+}
 export class OrdersService {
 // guardando el array de todas las órdenes para poder llamarlas en otro componente
   collectionOrders(){
@@ -39,22 +57,21 @@ export class OrdersService {
   });
 
 
-  getOrders(){
-      return this.orders;
+  getOrders() {
+    return this.orders;
   }
 
-  updateOrders(order:any){
-      return this.ordersCollection.doc(order.id).update(order);
+  updateOrders(order: any) {
+    return this.ordersCollection.doc(order.id).update(order);
   }
 
-  deleteOrders(id:string){
+  deleteOrders(id: string) {
     return this.ordersCollection.doc(id).delete();
   }
 
-  createOrders(order:any){
-      return this.ordersCollection.add(order);
+  createOrders(order: any) {
+    return this.ordersCollection.add(order);
   }
-
 }
 
 
@@ -89,4 +106,3 @@ export class OrdersService {
 //       .doc(data.payload.doc.id)
 //       .delete();
 //   }
-
