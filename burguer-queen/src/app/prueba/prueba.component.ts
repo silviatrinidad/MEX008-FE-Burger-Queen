@@ -1,4 +1,8 @@
-import {Component, ViewChild, ElementRef} from '@angular/core';
+import {Component, ViewChild, ElementRef} from '@angular/core';  
+import { MatDialog } from '@angular/material/dialog';
+
+//Yael 
+import { ModalTableOrdenComponent } from '../modal-table-orden/modal-table-orden.component'
 
 export interface Tile {
   color: string;
@@ -22,5 +26,10 @@ export class PruebaComponent {
   save(e) {
       console.log('Le diste click al boton 2');
     }
+  //Yael
+  constructor(public dialog: MatDialog){}
+    openModal(){
+      this.dialog.open(ModalTableOrdenComponent);
+    }
+  }
 
-}

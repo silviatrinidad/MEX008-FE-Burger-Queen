@@ -14,27 +14,24 @@
       </div>
     </mat-grid-tile>
     <mat-grid-tile [colspan]=2 [rowspan]=4  class="tile"> 
-      <div fxLayout="column" fxLayoutGap="20px" class="options">
+      <div fxLayout="column"  fxLayoutGap="20px" class="options">
         <mat-radio-group  class="radio-group">
-          <mat-radio-button class="radio-button" *ngFor="let pay of pays" >
+          <mat-radio-button class="radio-button" [value]="pay" *ngFor="let pay of pays" >
             {{pay}}
           </mat-radio-button>
         </mat-radio-group>
         <mat-radio-group  class="radio-group">
-          <mat-radio-button class="radio-button" *ngFor="let percentage of percentages">
+          <mat-radio-button class="radio-button"  [value]="percentage" *ngFor="let percentage of percentages">
             {{percentage}}
           </mat-radio-button>
-        </mat-radio-group>
+        </mat-radio-group> 
       </div> 
     </mat-grid-tile>
       <mat-grid-tile [colspan]=1 [rowspan]=4 class="tile"> 
-        <div  fxLayout = "column"  fxLayoutAlign = "center center" class="" fxLayoutGap="20px">
-          <!-- <button mat-raised-button> Cancelar</button>
-          <button mat-raised-button>Pagar</button> -->
+        <div  fxLayout = "column" fxLayoutGap="20px">
           <button mat-raised-button (click)="openDialog()" >EFECTIVO</button>
           <button mat-raised-button routerLinkActive="active"   routerLink="/">TARJETA</button> 
-          <!-- <button class="mdl-button mdl-button--raised" routerLinkActive="active"   routerLink="/take-order">Mesa 1</button>
-          <button class="mdl-button mdl-button--raised" routerLinkActive="active"   routerLink="/take-order">Mesa 2</button> -->
+        
       </div>            
      </mat-grid-tile>    
   </mat-grid-list>

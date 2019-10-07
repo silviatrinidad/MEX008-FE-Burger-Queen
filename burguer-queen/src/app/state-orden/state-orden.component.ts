@@ -15,9 +15,7 @@ export interface Tile {
   styleUrls: ['./state-orden.component.css']
 })
 export class StateOrdenComponent {
-  // tiles: Tile[] = [
-  //   {color: '', cols: 3, rows: 1, text: ''}
-  // ];
+
   constructor (public dialog: MatDialog) {}
   openDialog(){
     this.dialog.open(DialogStatusOrdenComponent);
