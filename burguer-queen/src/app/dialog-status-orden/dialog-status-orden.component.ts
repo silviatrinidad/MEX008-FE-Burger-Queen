@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {OrdersService} from '../shared/orders.service';
 
 @Component({
   selector: 'app-dialog-status-orden',
@@ -7,9 +8,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DialogStatusOrdenComponent{
 
-  constructor() { }
+  constructor(private orderService: OrdersService) { }
 
   ngOnInit() {
+  }
+
+  totalOrder = 0;
+  tempOrder = []; 
+  OrdersService: any;
+
+  onAddProduct(product){
+    console.log(product);
+    // suma de todos los precios
+    this.totalOrder = (this.totalOrder + product.price[0]);
+    console.log(this.totalOrder )
+    // Impresión de precio y producto en comanda
+    // this.tempOrder.push(product.name + " " + "$"+ product.price[0])
   }
 
 }

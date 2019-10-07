@@ -1,3 +1,4 @@
+
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 import 'hammerjs';
@@ -28,15 +29,17 @@ import {MatCardModule} from '@angular/material/card';
 import {MatRadioModule} from '@angular/material/radio';
 import {MatGridListModule} from '@angular/material/grid-list';
 // import { OrderListComponent } from './order-list/order-list.component';
-import { OrdersComponent } from './orders/orders.component';
+// import { OrdersComponent } from './orders/orders.component';
 import { ModalDialogBillComponent } from './modal-dialog-bill/modal-dialog-bill.component';
 
 // Yael
-import { StateOrdenComponent } from './state-orden/state-orden.component';
 import { MatDialogModule, MatBadgeModule } from '@angular/material';
+import { DragDropModule } from '@angular/cdk/drag-drop'
+
+import { StateOrdenComponent } from './state-orden/state-orden.component';
 import { DialogStatusOrdenComponent } from './dialog-status-orden/dialog-status-orden.component';
 import { OrdenPayComponent } from './orden-pay/orden-pay.component';
-import {BarTotalComponent} from './bar-total/bar-total.component';
+// import {BarTotalComponent} from './bar-total/bar-total.component';
 import { ConfirmDialogComponent } from './lateral-bar/confirm-dialog/confirm-dialog.component';
 
 // Firebase
@@ -45,11 +48,15 @@ import {AngularFireAuth, AngularFireAuthModule} from '@angular/fire/auth';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { environment } from '../environments/environment';
 import { UserService } from './user.service';
-import { HomeComponent } from './home/home.component';
-import { FormComponent } from './form/form.component';
 import {MatButtonModule, MatFormFieldModule, MatInputModule, MatRippleModule} from '@angular/material';
+// import { MenuModalComponent } from './menu/menu-modal/menu-modal.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { TimerComponent } from './timer/timer.component';
+import { ModalTableOrdenComponent } from './modal-table-orden/modal-table-orden.component';
 // import { FormGroup, FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
 //
+import { MatTableModule } from '@angular/material';
+import { ModalHamburgerSoberbiaComponent } from './modal-hamburger-soberbia/modal-hamburger-soberbia.component';
 
 
 @NgModule({
@@ -63,21 +70,27 @@ import {MatButtonModule, MatFormFieldModule, MatInputModule, MatRippleModule} fr
     TakeOrderComponent,
     BillComponent,
     BillClientComponent,
-    BarTotalComponent,
+    // BarTotalComponent,
     MenuComponent,
     ModalDialogBillComponent,
     StateOrdenComponent,
     DialogStatusOrdenComponent,
 
     OrdenPayComponent,
-    OrdersComponent,
-    ConfirmDialogComponent
-
+    // OrdersComponent,
+    ConfirmDialogComponent,
+    // MenuModalComponent
+    ConfirmDialogComponent,
+    TimerComponent,
+    ModalTableOrdenComponent,
+    ModalHamburgerSoberbiaComponent,
   ],
   // Yael
-  entryComponents: [DialogStatusOrdenComponent, ModalDialogBillComponent, ConfirmDialogComponent],
-
-
+  entryComponents: [DialogStatusOrdenComponent, 
+                    ModalDialogBillComponent, 
+                    ConfirmDialogComponent, 
+                    ModalTableOrdenComponent,
+                    ModalHamburgerSoberbiaComponent],
 
   imports: [
     BrowserModule,
@@ -95,17 +108,19 @@ import {MatButtonModule, MatFormFieldModule, MatInputModule, MatRippleModule} fr
     MatRadioModule,
     MatDialogModule,
     MatGridListModule,
+    ReactiveFormsModule,
+    MatTableModule,
 
     // Yael
     MatBadgeModule,
+    DragDropModule,
+    
     // Firebase
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAuthModule,
-    AngularFirestoreModule
+    AngularFirestoreModule,
     MatFormFieldModule,
-    MatBadgeModule, 
-    MatInputModule,
-    MatRippleModule
+    MatBadgeModule,
   ],
   providers: [
     UserService

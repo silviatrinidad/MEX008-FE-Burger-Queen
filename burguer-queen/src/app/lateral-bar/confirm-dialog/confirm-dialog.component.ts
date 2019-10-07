@@ -1,8 +1,9 @@
-import { Component, OnInit, Inject } from '@angular/core';
+import {Component, OnInit, Inject, Input} from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import {UserService} from '../../user.service';
-
-
+import {concatAll} from 'rxjs/operators';
+import {matDrawerAnimations} from '@angular/material/sidenav';
+import { AngularFireAuth } from '@angular/fire/auth';
 
 
 @Component({
@@ -12,45 +13,49 @@ import {UserService} from '../../user.service';
 })
 export class ConfirmDialogComponent implements OnInit {
 
+  constructor(
+    public authService: UserService,
+    public dialogRef: MatDialogRef<ConfirmDialogComponent>,
+    @Inject(MAT_DIALOG_DATA) public message: string
+  ) {
+  }
   email: string;
   password: string;
   msg: string;
   display = false;
 
-  constructor(public authService: UserService,
-              public dialogRef: MatDialogRef<ConfirmDialogComponent>,
-              @Inject(MAT_DIALOG_DATA) public message: string) { }
+
 
   ngOnInit() {
   }
 
-  onClickNO(): void {
-  this.dialogRef.close();
-  }
 
   login() {
     const user = this.authService.login('viridiana.avem@gmail.com', this.password);
-    user.
-    then(value => {
+    user.then(value => {
       this.msg = value;
       this.display = true;
-      console.log(value);
       sessionStorage.setItem('log', 'true');
+      this.dialogRef.close({ logged: true });
+
     })
       .catch(err => {
-        console.log('Algo fue mal:', err.message);
         this.msg = err.message;
         this.display = true;
       });
     this.email = '';
     this.password = '';
   }
-add(s) {
-if(this.password === undefind ) {
-this.password ='' + s.toString();
-} else
-{
-this.password = this.password + s.toString();
-} 
-} 
+
+
+  add(s) {
+    if (this.password === undefined) {
+      this.password = '' + s.toString();
+    } else {
+      this.password = this.password + s.toString();
+    }
+  }
+
+
+
 }

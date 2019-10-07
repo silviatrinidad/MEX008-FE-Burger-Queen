@@ -8,23 +8,23 @@ import {map} from 'rxjs/operators';
   providedIn: 'root'
 })
 export class OrdersService {
-    private ordersCollection: AngularFirestoreCollection<any>;
-    orders:Observable<any[]>;
+  private ordersCollection: AngularFirestoreCollection<any>;
+  orders: Observable<any[]>;
 
-  constructor(private readonly afs:AngularFirestore) {
-      this.ordersCollection = afs.collection<any>('orders');
-      this.orders = this.ordersCollection.snapshotChanges().pipe(map(
-          actions => actions.map(a =>{
-     //   Recorriendo documentos de firebase
-            const data = a.payload.doc.data();
-    //    Iteración sobre los documentos
-            const id = a.payload.doc.id;
-            return {id, ...data}
-          })
-      ));
+  constructor(private readonly afs: AngularFirestore) {
+    this.ordersCollection = afs.collection<any>('orders');
+    this.orders = this.ordersCollection.snapshotChanges().pipe(map(
+      actions => actions.map(a => {
+        //   Recorriendo documentos de firebase
+        const data = a.payload.doc.data();
+        //    Iteración sobre los documentos
+        const id = a.payload.doc.id;
+        return {id, ...data};
+      })
+    ));
   }
 
-  form = new FormGroup({
+  myForm = new FormGroup({
     customerName: new FormControl(''),
     orderNumber: new FormControl(''),
     order: new FormControl(''),
@@ -32,21 +32,22 @@ export class OrdersService {
   });
 
 
-  getOrders(){
-      return this.orders;
+  getOrders() {
+    return this.orders;
   }
 
-  updateOrders(order:any){
-      return this.ordersCollection.doc(order.id).update(order);
+  updateOrders(order: any) {
+    return this.ordersCollection.doc(order.id).update(order);
   }
 
-  deleteOrders(id:string){
+  deleteOrders(id: string) {
     return this.ordersCollection.doc(id).delete();
   }
 
-  createOrders(order:any){
-      return this.ordersCollection.add(order);
+  createOrders(order: any) {
+    return this.ordersCollection.add(order);
   }
+}
 
 
 
@@ -80,4 +81,3 @@ export class OrdersService {
 //       .doc(data.payload.doc.id)
 //       .delete();
 //   }
-

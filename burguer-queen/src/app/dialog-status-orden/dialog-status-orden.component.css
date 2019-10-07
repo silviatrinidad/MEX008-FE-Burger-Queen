@@ -1,24 +1,16 @@
-*{
-    position: relative;
-    z-index: initial;
-    display: flex;
-}
-
 .container-table{
     padding: 0px;
     margin: 0px;
     height: 300px;
     width: 500px;
     display: flex;
-    position:relative;
-    z-index: 2;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     align-content: space-around;
 }
 .table {
-    padding: 0px;
+    padding: 2px;
     margin: 5px;
     height: 100px;
     width: 150px;
@@ -29,8 +21,6 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    position: relative;
-    z-index: 3;
 }
 
 p{

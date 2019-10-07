@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FormComponent } from './form.component';
+import { TimerComponent } from './timer.component';
 
-describe('FormComponent', () => {
-  let component: FormComponent;
-  let fixture: ComponentFixture<FormComponent>;
+describe('TimerComponent', () => {
+  let component: TimerComponent;
+  let fixture: ComponentFixture<TimerComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ FormComponent ]
+      declarations: [ TimerComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(FormComponent);
+    fixture = TestBed.createComponent(TimerComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
