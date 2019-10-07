@@ -18,7 +18,6 @@ export class UserService {
       .signInWithEmailAndPassword(email, password);
   }
 
-  //
   // logout() {
   //   this.firebaseAuth
   //     .auth

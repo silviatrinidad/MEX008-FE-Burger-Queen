@@ -8,8 +8,8 @@ import { TakeOrderComponent} from './take-order/take-order.component';
 import { InitContainerComponent } from './init-container/init-container.component';
 import { BillComponent } from './bill/bill.component';
 // import { OrdersComponent } from './orders/orders.component';
-import { MenuComponent } from './menu/menu.component'
-  import { from } from 'rxjs';
+import { MenuComponent } from './menu/menu.component';
+import { from } from 'rxjs';
 
 const routes: Routes = [
 

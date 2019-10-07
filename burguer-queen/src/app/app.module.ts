@@ -50,8 +50,9 @@ import {MatButtonModule, MatFormFieldModule, MatInputModule, MatRippleModule} fr
 // import { MenuModalComponent } from './menu/menu-modal/menu-modal.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { TimerComponent } from './timer/timer.component';
-// import { FormGroup, FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
-//
+// import { FormGroup, FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';vi
+
+
 
 @NgModule({
   exports: [],
