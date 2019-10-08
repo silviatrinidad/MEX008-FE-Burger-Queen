@@ -57,6 +57,8 @@ import { ModalTableOrdenComponent } from './modal-table-orden/modal-table-orden.
 import * as firebase from 'firebase/app';
 import { MatTableModule } from '@angular/material';
 import { ModalHamburgerSoberbiaComponent } from './modal-hamburger-soberbia/modal-hamburger-soberbia.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+
 
 
 @NgModule({
@@ -121,6 +123,7 @@ import { ModalHamburgerSoberbiaComponent } from './modal-hamburger-soberbia/moda
     AngularFirestoreModule,
     MatFormFieldModule,
     MatBadgeModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
   ],
   providers: [
     UserService
