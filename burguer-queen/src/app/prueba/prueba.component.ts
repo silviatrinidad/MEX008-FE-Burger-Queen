@@ -21,15 +21,27 @@ export interface Tile {
 })
 export class PruebaComponent {
   tiles: Tile[] = [];
-//silvia
-  isActive = true;
-  save(e) {
-      console.log('Le diste click al boton 2');
+
+
+  constructor (public table: table) { }
+  
+    table() {
+      console.log('Clik en mesa uno');
+      
     }
-  //Yael
-  constructor(public dialog: MatDialog){}
-    openModal(){
-      this.dialog.open(ModalTableOrdenComponent);
-    }
+  
+    // openModal() {
+    //   this.dialog.open(ModalTableOrdenComponent)
+    // }
   }
+
+  // isActive = true;
+  // save(e) {
+  //     console.log('Le diste click al boton 2');
+  //   }
+  // //Yael
+  // constructor(public dialog: MatDialog){}
+  //   openModal(){
+  //     this.dialog.open(ModalTableOrdenComponent);
+  //   }
 
